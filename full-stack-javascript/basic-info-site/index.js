@@ -3,11 +3,22 @@ const path = require("path");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  const filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "index.html" : `${req.url}`
-  );
+  let filePath = "";
+  let contentType = "";
+  if (req.url === "/favicon.ico") {
+    filePath = path.join(__dirname, "assets", "felixtanhm_nodejs.png");
+    contentType = "text/html";
+  } else if (req.url === "/style.css") {
+    filePath = path.join(__dirname, "styles", "style.css");
+    contentType = "text/css";
+  } else if (req.url === "/") {
+    filePath = path.join(__dirname, "public", "index.html");
+    contentType = "text/html";
+  } else {
+    filePath = path.join(__dirname, "public", `${req.url}.html`);
+    contentType = "text/html";
+  }
+
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === "ENOENT") {
@@ -23,7 +34,7 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      res.writeHead(200, { "Content-Type": "text/html" });
+      res.writeHead(200, { "Content-Type": contentType });
       res.end(content, "utf8");
     }
   });
