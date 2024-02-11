@@ -4,8 +4,12 @@
   "description": "A basic info site to learn nodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index"
   },
   "author": "felixtanhm",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
 }

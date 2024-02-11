@@ -3,10 +3,24 @@ const path = require("path");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  const pathURL = req.url;
-  console.log(pathURL);
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end("hello world");
+  if (req.url === "/")
+    fs.readFile(
+      path.join(__dirname, "public", "index.html"),
+      (err, content) => {
+        if (err) throw err;
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(content);
+      }
+    );
+  if (req.url !== "/")
+    fs.readFile(
+      path.join(__dirname, "public", "about.html"),
+      (err, content) => {
+        if (err) throw err;
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(content);
+      }
+    );
 });
 
 const PORT = process.env.PORT || "8080";
