@@ -3,20 +3,38 @@ const path = require("path");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  let filePath = "";
+  let filePath = __dirname;
   let contentType = "";
-  if (req.url === "/favicon.ico") {
-    filePath = path.join(__dirname, "assets", "felixtanhm_nodejs.png");
-    contentType = "text/html";
-  } else if (req.url === "/style.css") {
-    filePath = path.join(__dirname, "styles", "style.css");
-    contentType = "text/css";
-  } else if (req.url === "/") {
-    filePath = path.join(__dirname, "public", "index.html");
-    contentType = "text/html";
-  } else {
-    filePath = path.join(__dirname, "public", `${req.url}.html`);
-    contentType = "text/html";
+
+  // Determine Routing
+  switch (req.url) {
+    case "/":
+      filePath += "/public/index.html";
+      res.statusCode = 200;
+      break;
+    case "/style.css":
+      filePath += "/styles/style.css";
+      res.statusCode = 200;
+      break;
+    case "/favicon.ico":
+      filePath += "/assets/felixtanhm_nodejs.png";
+      res.statusCode = 200;
+      break;
+    default:
+      filePath += `/public${req.url}.html`;
+      res.statusCode = 200;
+      break;
+  }
+
+  // Determine Content-Type
+  const reqExt = path.extname(req.url);
+  switch (reqExt) {
+    case ".css":
+      contentType = "text/css";
+      break;
+    default:
+      contentType = "text/html";
+      break;
   }
 
   fs.readFile(filePath, (err, content) => {
@@ -25,16 +43,18 @@ const server = http.createServer((req, res) => {
         fs.readFile(
           path.join(__dirname, "public", "404.html"),
           (err, content) => {
-            res.writeHead(200, { "Content-Type": "text/html" });
+            res.setHeader("Content-Type", contentType);
+            res.statusCode = 404;
             res.end(content, "utf8");
           }
         );
       } else {
-        res.writeHead(500, { "Content-Type": "text/html" });
+        res.setHeader("Content-Type", contentType);
+        res.statusCode = 500;
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      res.writeHead(200, { "Content-Type": contentType });
+      res.setHeader("Content-Type", contentType);
       res.end(content, "utf8");
     }
   });
@@ -42,4 +62,4 @@ const server = http.createServer((req, res) => {
 
 const PORT = process.env.PORT || "8080";
 
-server.listen(PORT, () => console.log("server is running"));
+server.listen(PORT);
