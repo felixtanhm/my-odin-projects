@@ -1,0 +1,11 @@
+{
+  "name": "basic-info-site",
+  "version": "1.0.0",
+  "description": "A basic info site to learn nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index"
+  },
+  "author": "felixtanhm",
+  "license": "ISC"
+}
