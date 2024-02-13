@@ -6,19 +6,19 @@ A basic info site built to learn the basics of NodeJS and Express.
 
 ## Usage
 
-Clone project to your local machine. Navigate to `basic-node-site` folder and decide which backend to use.
+Clone project to your local machine. Navigate to `basic-info-site` folder and decide which backend to use.
 
 ### Node backend
 
 ```bash
-cd my-odin-projects/basic-node-site/node-backend
+cd my-odin-projects/basic-info-site/node-backend
 npm run dev
 ```
 
 ### Express backend
 
 ```bash
-cd my-odin-projects/basic-node-site/express-backend
+cd my-odin-projects/basic-info-site/express-backend
 npm install
-npm start
+npm run dev
 ```
