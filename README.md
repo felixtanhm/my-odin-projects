@@ -1,3 +1,5 @@
+<p align="center"><img src="./public/top-header.png" alt="felixtanhm-portfolio-the-odin-project" width="200"/></p>
+
 [The Odin Project](https://www.theodinproject.com/) provides a free open source coding curriculum that can be taken entirely online.
 
 This repository serves as a compilation for all the projects that were done as part of the curriculum. The tables below provide more information about each project, including:
@@ -8,7 +10,11 @@ This repository serves as a compilation for all the projects that were done as p
 - **Preview:** A live demo of the deployed project. This might not be available for some projects due to the project's nature.
 - **Rating:** The degree of polish and effort put into going beyond the minimum project specifications.
 
+---
+
 ## 🎈 Foundations
+
+---
 
 [**Course Completion Reflection**](#)
 
@@ -22,6 +28,8 @@ This repository serves as a compilation for all the projects that were done as p
 | [**Calculator 2.0**](#)      | JavaScript Basics | WIP        | WIP       | ⭐⭐⭐ |
 
 ## 🚀 Full Stack JavaScript
+
+---
 
 [**Course Completion Reflection**](#)
 
@@ -63,8 +71,8 @@ Short description of the project, including the topics covered.
 
 ![GIF Recording of Project Demo](basic-info-site.gif)
 
-[Live Demo ✨](#) |
-[Project Specs 📝](#)
+[**Live Demo**](#) ✨ |
+[**Project Specs**](#) 📝
 
 ## 🪃 Features
 
