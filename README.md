@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/top-header.png" alt="felixtanhm-portfolio-the-odin-project" width="200"/></p>
+<p align="center"><img src="./public/top-header-h.png" alt="felixtanhm-portfolio-the-odin-project" width="280"/></p>
 
 [The Odin Project](https://www.theodinproject.com/) provides a free open source coding curriculum that can be taken entirely online.
 
