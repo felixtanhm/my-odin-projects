@@ -1,4 +1,4 @@
-# Mini Message Board
+# Mini Message Board 📋
 
 A Mini Message Board project to learn the basics of backend development.
 

@@ -1,4 +1,4 @@
-# Basic Info Site
+# Basic Info Site 🗂️
 
 A basic info site built to learn the basics of NodeJS and Express.
 
