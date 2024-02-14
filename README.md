@@ -1,8 +1,8 @@
 <p align="center"><img src="./public/top-header-h.png" alt="felixtanhm-portfolio-the-odin-project" width="280"/></p>
 
-[The Odin Project](https://www.theodinproject.com/) (TOP) provides a free open source web development curriculum that has received [raving reviews](https://www.reddit.com/r/learnprogramming/comments/u6rrz9/why_is_everyone_recommending_the_odin_project/?sort=top).
+[The Odin Project](https://www.theodinproject.com/) (TOP) provides a free open source web development curriculum that has received [raving reviews](https://www.reddit.com/r/learnprogramming/comments/u6rrz9/why_is_everyone_recommending_the_odin_project/?sort=top). This repository serves as a compilation for all the projects that were completed as part of the curriculum.
 
-This repository serves as a compilation for all the projects that were done as part of the curriculum. The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The tables below provide more information about the projects in each section, including:
+The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The tables below provide more information about the projects in each section, including:
 
 - **Project:** The name of the project, along with a link to the project specifications.
 - **Topics:** The programming topics targeted for the project.
