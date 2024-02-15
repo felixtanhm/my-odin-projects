@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.fab {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
