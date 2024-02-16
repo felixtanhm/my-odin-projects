@@ -5,7 +5,7 @@ A Mini Message Board project to learn the basics of backend development.
 ![GIF Recording of Mini Message Board](basic-info-site.gif)
 
 [**Live Demo**](#) ✨ |
-[**Project Specs**](#) 📝
+[**Odin's Project Specs**](https://www.theodinproject.com/lessons/nodejs-mini-message-board) 📝
 
 ## 🪃 Features
 

@@ -18,14 +18,13 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The
 
 [**Course Completion Reflection**](#)
 
-| Project                      | Topic(s)          | Repository | Preview   | Rating |
-| ---------------------------- | ----------------- | ---------- | --------- | ------ |
-| [**Recipe Site**](#)         | HTML Foundations  | [Code](#)  | [Demo](#) | ⭐⭐   |
-| [**Landing Page**](#)        | Flexbox           | WIP        | WIP       | ⭐     |
-| [**Rock Paper Scissors**](#) | JavaScript Basics | WIP        | WIP       | ⭐⭐⭐ |
-| [**Etch-a-Sketch**](#)       | JavaScript Basics | WIP        | WIP       | ⭐⭐   |
-| [**Calculator**](#)          | JavaScript Basics | WIP        | WIP       | ⭐     |
-| [**Calculator 2.0**](#)      | JavaScript Basics | WIP        | WIP       | ⭐⭐⭐ |
+| Project                                                                                           | Topic(s)          | Repository                                                                               | Preview   | Rating |
+| ------------------------------------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------- | --------- | ------ |
+| [**Recipe Site**](https://www.theodinproject.com/lessons/foundations-recipes)                     | HTML Foundations  | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/recipe-site)  | [Demo](#) | ⭐     |
+| [**Landing Page**](https://www.theodinproject.com/lessons/foundations-landing-page)               | Flexbox           | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/landing-page) | WIP       |        |
+| [**Rock Paper Scissors**](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
+| [**Etch-a-Sketch**](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)             | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
+| [**Calculator**](https://www.theodinproject.com/lessons/foundations-calculator)                   | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
 
 ---
 
