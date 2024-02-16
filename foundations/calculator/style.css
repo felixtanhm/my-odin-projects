@@ -1,0 +1,137 @@
+:root {
+  --background-color: black;
+  --operand-color: #343434;
+  --special-btn-color: #a5a5a5;
+  --operand-active: #575757;
+  --operator-color: #ff9f0a;
+  --operator-active: #ffad32;
+}
+
+* {
+  font-family: BlinkMacSystemFont, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--operator-color);
+}
+
+h1,
+#display,
+#equals,
+#decimal,
+.operator,
+.operand {
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  /* margin-top: 0.5rem; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 12px;
+  width: fit-content;
+  align-self: center;
+}
+
+#display {
+  width: 100%;
+  font-size: 3rem;
+  padding-right: 12px;
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+#inputs {
+  display: grid;
+  gap: 12px;
+  width: fit-content;
+  min-height: 200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.btn {
+  border: 1px solid var(--background-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.btn-2x {
+  grid-column: span 2;
+  border-radius: 64px;
+  width: 140px;
+}
+
+.operand,
+#decimal {
+  background-color: var(--operand-color);
+}
+
+.util {
+  background-color: var(--special-btn-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.operand:active,
+.util:active,
+#decimal:active {
+  background-color: var(--operand-active);
+}
+
+.operator,
+#equals {
+  background-color: var(--operator-color);
+  font-size: 2.5rem;
+}
+
+.operator:active,
+#equals:active {
+  background-color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 24px;
+}
+
+.fab {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}

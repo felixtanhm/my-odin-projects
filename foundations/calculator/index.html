@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This Calculator application was built with HTML, CSS and basic Javascript as part of The Odin Project's curriculum. A felixtanhm portfolio"
+    />
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>"
+    />
+    <title>Odin Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Odin Calculator</h1>
+    </header>
+    <main>
+      <section id="display">0</section>
+      <section id="inputs">
+        <button class="btn util" value="clear">AC</button>
+        <button class="btn util" value="sign">+/-</button>
+        <button class="btn util" value="hundreds">%</button>
+        <button class="btn operator" value="/">÷</button>
+
+        <button class="btn operand">7</button>
+        <button class="btn operand">8</button>
+        <button class="btn operand">9</button>
+        <button class="btn operator" value="*">×</button>
+
+        <button class="btn operand">4</button>
+        <button class="btn operand">5</button>
+        <button class="btn operand">6</button>
+        <button class="btn operator" value="-">−</button>
+
+        <button class="btn operand">1</button>
+        <button class="btn operand">2</button>
+        <button class="btn operand">3</button>
+        <button class="btn operator" value="+">+</button>
+
+        <button class="btn operand btn-2x">0</button>
+        <button id="decimal" class="btn">.</button>
+        <button id="equals" class="btn">=</button>
+      </section>
+      <footer class="footer">
+        <p class="fab">© 2024 - Present | felixtanhm</p>
+        <a
+          href="https://www.github.com/felixtanhm"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
