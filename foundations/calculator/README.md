@@ -1,10 +1,12 @@
 # Calculator 🔢
 
-A calculator application built to mimic the basic functionalities of the mobile iOS calculator as much as possible. This project covers the basics of Javascript, including, loops, arrays, objects, functions and DOM manipulation.
+A calculator application built to mimic the basic functionalities of the mobile iOS calculator as much as possible.
+
+As the final project of The Odin Project's Foundation course, it covers basics of Javascript, including, loops, arrays, objects, functions and DOM manipulation.
 
 This project also showed me just how easy it is to miss out on edge cases!
 
-![GIF Recording of Calculator](basic-info-site.gif)
+![GIF Recording of Calculator](calculator.gif)
 
 [**Live Demo**](#) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-calculator) 📝
