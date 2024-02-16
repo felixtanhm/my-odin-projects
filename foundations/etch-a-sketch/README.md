@@ -1,6 +1,6 @@
 # Etch A Sketch 🎨
 
-Basic Recipe Site built with HTML and CSS only. This project serves to familiarise with semantic HTML structures, along with the basics of Git.
+A tool for drawing pixel based art built with HTML, CSS and Javascript. This project covers basics of Javascript, including loops, arrays, functions and DOM manipulation.
 
 ![GIF Recording of Etch A Sketch](./assets/etch-a-sketch.gif)
 
