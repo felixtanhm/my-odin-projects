@@ -41,7 +41,7 @@ header,
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
+  padding: 24px 16px;
   gap: 8px;
 }
 
@@ -49,6 +49,7 @@ header,
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 .card {
@@ -69,10 +70,35 @@ header,
 
 #quote {
   background-color: #e5e7eb;
+  padding: 16px;
+}
+
+#quote-container {
+  padding: 8px;
+}
+
+#quote-container > p {
+  font-style: italic;
+  text-align: justify;
+}
+
+#quote-container > p:last-child {
+  font-weight: 700;
+  text-align: right;
+}
+
+#cta {
+  padding: 16px;
+  background-color: white;
 }
 
 #cta > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
   background-color: #5e82c6;
+  padding: 24px;
 }
 
 .btn {
@@ -84,6 +110,33 @@ header,
   color: white;
   font-weight: 700;
   max-width: fit-content;
+}
+
+.secondary {
+  background-color: white;
+  color: #3882f6;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 24px;
+}
+
+.fab {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 
 @media screen and (min-width: 720px) {
@@ -108,15 +161,48 @@ header,
     max-width: 50%;
   }
 
+  #service {
+    padding: 32px;
+    padding-bottom: 52px;
+    min-height: 50vh;
+    justify-content: center;
+  }
+
   .card-container {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
     gap: 12px;
+    width: fit-content;
   }
 
   .card {
     width: 25%;
+  }
+
+  #quote {
+    padding: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+
+  #quote-container {
+    max-width: 70%;
+    padding: 8px;
+  }
+
+  #cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+
+  #cta > div {
+    min-width: 90%;
+    padding: 48px 72px;
   }
 
   h1 {

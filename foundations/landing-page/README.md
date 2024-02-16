@@ -1,8 +1,8 @@
-# Landing Page 🍛
+# Landing Page 🚅
 
 Basic Landing Page built with HTML and CSS only. This project serves to familiarise with Flexbox.
 
-![GIF Recording of Landing Page](./assets/playlista.gif)
+![GIF Recording of Landing Page](./assets/metroco.gif)
 
 [**Live Demo**](#) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-landing-page) 📝
