@@ -6,7 +6,7 @@ As the final project of The Odin Project's Foundation course, it covers basics o
 
 This project also showed me just how easy it is to miss out on edge cases!
 
-![GIF Recording of Calculator](calculator.gif)
+![GIF Recording of Calculator](./assets/calculator.gif)
 
 [**Live Demo**](#) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-calculator) 📝
