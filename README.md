@@ -8,7 +8,7 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The
 - **Topics:** The programming topics targeted for the project.
 - **Repository:** A direct link to the subfolder of the project in this repository.
 - **Preview:** A live demo of the deployed project. This might not be available for some projects due to the project's nature.
-- **Rating:** The degree of polish and effort put into going beyond the minimum project specifications.
+- **Rating:** The degree of polish and effort put into going beyond the minimum project specifications. Projects just meeting specifications are indicated as a "-".
 
 ---
 
@@ -18,13 +18,13 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The
 
 [**Course Completion Reflection**](#)
 
-| Project                                                                                           | Topic(s)          | Repository                                                                               | Preview   | Rating |
-| ------------------------------------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------- | --------- | ------ |
-| [**Recipe Site**](https://www.theodinproject.com/lessons/foundations-recipes)                     | HTML Foundations  | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/recipe-site)  | [Demo](#) | ⭐     |
-| [**Landing Page**](https://www.theodinproject.com/lessons/foundations-landing-page)               | Flexbox           | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/landing-page) | WIP       |        |
-| [**Rock Paper Scissors**](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
-| [**Etch-a-Sketch**](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)             | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
-| [**Calculator**](https://www.theodinproject.com/lessons/foundations-calculator)                   | JavaScript Basics | WIP                                                                                      | WIP       | ⭐⭐⭐ |
+| Project                                                                                           | Topic(s)                               | Repository                                                                               | Preview   | Rating |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------- | --------- | ------ |
+| [**Recipe Site**](https://www.theodinproject.com/lessons/foundations-recipes)                     | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/recipe-site)  | [Demo](#) | ⭐     |
+| [**Landing Page**](https://www.theodinproject.com/lessons/foundations-landing-page)               | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/landing-page) | WIP       | -      |
+| [**Rock Paper Scissors**](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) | JS Basics: Functions and Conditionals  | WIP                                                                                      | WIP       | ⭐⭐⭐ |
+| [**Etch-a-Sketch**](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)             | JS Basics: Arrays and DOM Manipulation | WIP                                                                                      | WIP       | ⭐⭐⭐ |
+| [**Calculator**](https://www.theodinproject.com/lessons/foundations-calculator)                   | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/calculator)   | WIP       | ⭐⭐⭐ |
 
 ---
 
@@ -36,10 +36,10 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**. The
 
 | Project                           | Topic(s)                              | Repository | Preview | Rating |
 | --------------------------------- | ------------------------------------- | ---------- | ------- | ------ |
-| [**Sign-up Form**](#)             | Forms                                 | WIP        | WIP     | ⭐⭐   |
-| [**Admin Dashboard**](#)          | Grid                                  | WIP        | WIP     | ⭐⭐   |
+| [**Sign-up Form**](#)             | Forms                                 | WIP        | WIP     | -      |
+| [**Admin Dashboard**](#)          | Grid                                  | WIP        | WIP     | ⭐     |
 | [**Library**](#)                  | Objects and Object constructors, OOP  | WIP        | WIP     | ⭐     |
-| [**Tic Tac Toe**](#)              | Factory functions and module patterns | WIP        | WIP     | ⭐⭐⭐ |
+| [**Tic Tac Toe**](#)              | Factory functions and module patterns | WIP        | WIP     | ⭐     |
 | [**Restaurant Page**](#)          | ES6 modules, Webpack                  | WIP        | WIP     | ⭐     |
 | [**Todo List**](#)                | SOLID principles                      | WIP        | WIP     | ⭐⭐   |
 | [**Weather App**](#)              | Asynchronous JavaScript and APIs      | WIP        | WIP     | ⭐⭐   |

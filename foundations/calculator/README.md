@@ -1,6 +1,6 @@
 # Calculator 🧮
 
-A calculator application built with HTML, CSS and Javascript. This project covers the basics of Javascript, including, loops, arrays, objects, functions and DOM manipulation.
+A calculator application built to mimic the basic functionalities of the mobile iOS calculator as much as possible. This project covers the basics of Javascript, including, loops, arrays, objects, functions and DOM manipulation.
 
 This project also showed me just how easy it is to miss out on edge cases!
 
