@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A tool for drawing pixel based art built with HTML, CSS and Javascript as part of The Odin Project's curriculum. A felixtanhm portfolio"
+    />
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>"
+    />
+    <title>Etch a Sketch | felixtanhm portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Etch a Sketch</h1>
+      <h4>Sketch your dreams! Hold down your mouse to draw.</h4>
+    </header>
+    <main>
+      <section id="selection">
+        <div id="selection-slider">
+          <p>Grid Size:</p>
+          <input id="grid-slider" type="range" value="16" min="4" max="64" />
+          <label for="grid-slider">16 x 16</label>
+        </div>
+        <div id="selection-buttons">
+          <button id="default" class="btn active">Default</button>
+          <button id="rainbow" class="btn">Rainbow</button>
+          <button id="erase" class="btn">Eraser</button>
+          <button id="clear" class="btn">Clear</button>
+        </div>
+      </section>
+      <section id="grid"></section>
+    </main>
+    <footer class="footer">
+      <p class="fab">© 2024 - Present | felixtanhm</p>
+      <a
+        href="https://www.github.com/felixtanhm"
+        target="_blank"
+        rel="noreferrer"
+        class="fab"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

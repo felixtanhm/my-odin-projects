@@ -1,0 +1,126 @@
+:root {
+  --background-color: #111827;
+  --button-bg: #2c766e;
+  --button-bg-active: #245e59;
+  --font-color: #d1d5db;
+  --border-color: #4b5563;
+  --sketch-width: 480px;
+  --sketch-width-mobile: 280px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+body {
+  padding: 12px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#selection-slider {
+  display: flex;
+  gap: 8px;
+  color: white;
+}
+
+#selection-buttons {
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.btn {
+  border: 1px solid var(--button-bg);
+  border-radius: 4px;
+  min-width: 80px;
+  margin: 0 4px;
+  padding: 8px 16px;
+  background-color: var(--button-bg);
+  color: var(--font-color);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover,
+.active {
+  background-color: var(--button-bg-active);
+}
+
+.active {
+  cursor: default;
+}
+
+#clear {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+
+#clear:hover {
+  background-color: var(--border-color);
+}
+
+#grid {
+  width: var(--sketch-width);
+  height: var(--sketch-width);
+  display: grid;
+  border: 2px solid var(--border-color);
+}
+
+.grid-element {
+  background-color: #fefefe;
+}
+
+.footer {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.fab {
+  color: white;
+}
+
+.fa-github {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
