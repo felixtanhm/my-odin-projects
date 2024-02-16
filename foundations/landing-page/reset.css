@@ -20,7 +20,7 @@
 html,
 body {
   height: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Inter, Helvetica, sans-serif;
 }
 
 /*
@@ -66,4 +66,5 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  color: black;
 }

@@ -1,19 +1,129 @@
-.footer {
+body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1f2937;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.text-white {
+  color: white;
+}
+
+header,
+#hero,
+#service,
+#quote,
+#cta {
+  padding: 0 12px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 32px;
+}
+
+#hero > img {
+  max-width: 360px;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#service {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 24px;
   gap: 8px;
 }
 
-.fab {
-  color: black;
-  font-size: 1.2rem;
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.fa-github {
-  transition: transform 0.3s ease-in-out;
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
 }
 
-.fa-github:hover {
-  transform: rotate(360deg) scale(1.2);
+.card > img {
+  max-width: 120px;
+}
+
+#quote {
+  background-color: #e5e7eb;
+}
+
+#cta > div {
+  background-color: #5e82c6;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid #3882f6;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #3882f6;
+  color: white;
+  font-weight: 700;
+  max-width: fit-content;
+}
+
+@media screen and (min-width: 720px) {
+  header,
+  #hero,
+  #service,
+  #quote,
+  #cta {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+  }
+
+  #hero-content,
+  #hero > img {
+    max-width: 50%;
+  }
+
+  .card-container {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .card {
+    width: 25%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.5rem;
+  }
 }
