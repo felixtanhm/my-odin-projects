@@ -13,17 +13,11 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 body {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -43,7 +37,6 @@ h1,
 
 h1 {
   font-size: 2.5rem;
-  /* margin-top: 0.5rem; */
 }
 
 main {
@@ -52,6 +45,7 @@ main {
   padding: 24px 12px;
   width: fit-content;
   align-self: center;
+  margin-bottom: 48px;
 }
 
 #display {
@@ -115,20 +109,28 @@ main {
 }
 
 .footer {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding-bottom: 24px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .fab {
   color: white;
-  font-size: 1.2rem;
 }
 
 .fa-github {
+  font-size: 24px;
   transition: transform 0.3s ease-in-out;
 }
 
