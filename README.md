@@ -9,25 +9,27 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**.
 You can either navigate to the individual sections for more details, or view a summary of the full list of projects in table format below.
 
 **Navigation:**
-[🎈 Foundations ](https://github.com/felixtanhm/my-odin-projects/tree/main/foundations) | [ 🚀 Full Stack Javascript ](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript)
+🎈 [Foundations ](https://github.com/felixtanhm/my-odin-projects/tree/main/foundations) | 🚀 [ Full Stack Javascript ](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript)
 
 ---
 
 ## Full Project List
 
+> **\*Rating** : This is used to denote the degree of polish and effort beyond the minimum project specifications.
+
 #### **🎈 Foundations** | [Reflections and Thoughts](#)
 
-| Project                 | Topic(s)                               | Repository                                                                                            | Preview                                | Rating\* |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------- | -------- |
-| **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](#)                              | ⭐       |
-| **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | WIP                                    | -        |
-| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/) | ⭐⭐⭐   |
-| **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | WIP                                    | ⭐⭐     |
-| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | WIP                                    | ⭐⭐⭐   |
+| Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating\* |
+| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- |
+| **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐       |
+| **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -        |
+| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐⭐   |
+| **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐     |
+| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐⭐   |
 
 ---
 
-#### **🚀 Full Stack JavaScript** | [Course Completion Reflection](#)
+#### **🚀 Full Stack JavaScript** | [Reflections and Thoughts](#)
 
 | Project                      | Topic(s)                              | Repository | Preview | Rating\* |
 | ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
@@ -60,8 +62,6 @@ You can either navigate to the individual sections for more details, or view a s
 | **Odin-Book**                | Final project                         | WIP        | WIP     |          |
 
 ---
-
-> **\*Rating** : The degree of polish and effort put into going beyond the minimum project specifications.
 
 ---
 
