@@ -9,7 +9,7 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**.
 You can either navigate to the individual sections for more details, or view a summary of the full list of projects in table format below.
 
 **Navigation:**
-🎈 [Foundations ](https://github.com/felixtanhm/my-odin-projects/foundations) | 🚀 [ Full Stack Javascript ](https://github.com/felixtanhm/my-odin-projects/full-stack-javascript)
+🎈 [Foundations](https://github.com/felixtanhm/my-odin-projects/foundations) | 🚀 [Full Stack Javascript](https://github.com/felixtanhm/my-odin-projects/full-stack-javascript)
 
 ---
 
