@@ -18,14 +18,24 @@ test("Analysed array returns an object with the correct values.", () => {
   });
 });
 
+test("Analyser throws an error when input is not an array.", () => {
+  expect(analyseArray.analyse("1,2,3,4,5")).toBe(
+    "Input does not consist of an Array."
+  );
+});
+
 test("Analyser throws an error when non-number exists.", () => {
   expect(analyseArray.analyse([1, 1, 1, 1, "1"])).toBe(
     "Array consists of a non-number."
   );
 });
 
-test("Analyser throws an error when input is not an array.", () => {
-  expect(analyseArray.analyse("1,2,3,4,5")).toBe(
-    "Input does not consist of an Array."
+test("Analyser throws an error when NaN exists.", () => {
+  expect(analyseArray.analyse([1, 1, 1, 1, NaN])).toBe(
+    "Array consists of a non-number."
   );
+});
+
+test("Analyser throws an error when input is an empty array", () => {
+  expect(analyseArray.analyse([])).toBe("Input is an empty Array.");
 });

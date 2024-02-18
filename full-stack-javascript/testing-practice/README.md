@@ -1,6 +1,6 @@
 # Testing Practice 🧪
 
-Basic introduction to unit testing and Test Driven Development with Jest.
+Basic introduction to unit testing and Test Driven Development with Jest. Particularly proud of the test coverage for Caesar Cipher!
 
 [**Live Demo**](#) ✨ |
 [**Project Specs**]() 📝

@@ -22,8 +22,12 @@ const analyseArray = (() => {
   function validation(arr) {
     if (!Array.isArray(arr)) return "Input does not consist of an Array.";
 
-    if (!arr.every((value) => typeof value == "number"))
+    if (
+      !arr.every((value) => !Number.isNaN(value) && typeof value === "number")
+    )
       return "Array consists of a non-number.";
+
+    if (arr.length === 0) return "Input is an empty Array.";
 
     return true;
   }

@@ -1,5 +1,9 @@
+function isValidNumber(number) {
+  return !Number.isNaN(number) && typeof number === "number";
+}
+
 function sum(a, b) {
-  if (typeof a == "number" && typeof b == "number") {
+  if (isValidNumber(a) && isValidNumber(b)) {
     return a + b;
   }
   return "Inputs need to be integers.";
