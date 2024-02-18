@@ -8,7 +8,7 @@ This project also showed me just how easy it is to miss out on edge cases!
 
 ![GIF Recording of Calculator](./assets/calculator.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-[FINAL]/) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-calculator) 📝
 
 ## 🪃 Features

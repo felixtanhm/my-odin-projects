@@ -4,7 +4,7 @@ A tool for drawing pixel based art built with HTML, CSS and Javascript. This pro
 
 ![GIF Recording of Etch A Sketch](./assets/etch-a-sketch.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch/) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) 📝
 
 ## 🪃 Features

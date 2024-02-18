@@ -4,7 +4,7 @@ Basic Recipe Site built with HTML and CSS only. This project serves to familiari
 
 ![GIF Recording of Recipe Site](./assets/recipe-site.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site/) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-recipes) 📝
 
 ## 🪃 Features

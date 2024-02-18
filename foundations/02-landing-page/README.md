@@ -4,7 +4,7 @@ Basic Landing Page built with HTML and CSS only. This project serves to familiar
 
 ![GIF Recording of Landing Page](./assets/metroco.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page/) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/foundations-landing-page) 📝
 
 ## 🪃 Features

@@ -17,7 +17,7 @@ You can either navigate to the individual sections for more details, or view a s
 
 > **\*Rating** : This is used to denote the degree of polish and effort beyond the minimum project specifications.
 
-#### **🎈 Foundations** | [Reflections and Thoughts](#)
+#### **🎈 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
 | Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating\* |
 | ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- |
@@ -29,7 +29,7 @@ You can either navigate to the individual sections for more details, or view a s
 
 ---
 
-#### **🚀 Full Stack JavaScript** | [Reflections and Thoughts](#)
+#### **🚀 Full Stack JavaScript** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript#reflections--thoughts)
 
 | Project                      | Topic(s)                              | Repository | Preview | Rating\* |
 | ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
