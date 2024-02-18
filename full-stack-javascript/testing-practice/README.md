@@ -2,20 +2,12 @@
 
 Basic introduction to unit testing and Test Driven Development with Jest. Particularly proud of the test coverage for Caesar Cipher!
 
-[**Live Demo**](#) ✨ |
-[**Project Specs**]() 📝
+[**Project Specs**](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice#assignment) 📝
 
 ## 🪃 Features
 
-- Feature1
-- Feature2
-- Feature3
-
-#### 🧭 Future Implementations
-
-- Feature1
-- Feature2
-- Feature3
+- Comprehensive coverage for Caesar Cipher
+- Comprehensive coverage for number operations, including null and NaN
 
 ## 💻 Built With
 
