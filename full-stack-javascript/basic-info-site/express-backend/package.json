@@ -4,7 +4,8 @@
   "description": "A basic info site to learn Express",
   "main": "app.js",
   "scripts": {
-    "dev": "node --watch app"
+    "dev": "node --watch app",
+    "build": "node app"
   },
   "author": "",
   "license": "ISC",
