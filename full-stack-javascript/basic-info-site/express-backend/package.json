@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "node --watch app",
-    "build": "node app"
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
