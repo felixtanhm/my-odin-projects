@@ -1,36 +1,37 @@
 const express = require("express");
 const router = express.Router();
-
-const messages = [
-  {
-    text: "hi",
-    user: "John",
-    date: new Date(),
-  },
-  {
-    text: "hi2",
-    user: "Jane",
-    date: new Date(),
-  },
-];
+const Message = require("../models/messages");
+const { formatRelative } = require("date-fns");
 
 /* GET home page. */
-router.get("/", (req, res, next) => {
-  res.render("index", { title: "Mini Message Board", messages });
+router.get("/", async (req, res, next) => {
+  try {
+    const [messages, messageCount] = await Promise.all([
+      Message.find({}).exec(),
+      Message.countDocuments({}).exec(),
+    ]);
+    console.log(messages);
+    res.render("index", {
+      title: "Motivational Messages",
+      messages,
+      messageCount,
+      formatRelative,
+    });
+  } catch (error) {
+    return next(error);
+  }
 });
 
 router.get("/new", (req, res, next) => {
-  res.render("newForm", { title: "Mini Message Board" });
+  res.render("newForm", { title: "Create New Motivational Message" });
 });
 
-router.post("/new", (req, res, next) => {
-  console.log("form submitted");
-  console.log(req.body);
-  messages.push({
-    text: req.body.message,
-    user: "Admin Felix",
-    date: new Date(),
+router.post("/new", async (req, res, next) => {
+  const message = new Message({
+    username: req.body.username,
+    content: req.body.message,
   });
+  await message.save();
   res.redirect("/");
 });
 

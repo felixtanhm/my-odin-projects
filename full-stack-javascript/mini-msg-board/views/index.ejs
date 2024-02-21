@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+  <%- include('./partials/head.ejs') %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <% messages.map((message) => {%>
-    <p>
-      <span><%= message.user %></span>: <%= message.text %> at <%= message.date
-      %>
-    </p>
-    <% })%>
+    <header><h1><%= title %></h1></header>
+    <main>
+      <p>Welcome to <%= title %></p>
+      <p>
+        Post messages to this board to motivate and inspire people who're
+        learning programming! <span>Let's make this a happy place :)</span>
+      </p>
+      <p>Total Messages Posted: <span><%= messageCount %></span></p>
+      <div class="message-board">
+        <% messages.map((message) => {%>
+        <p>
+          <span><%= message.username %></span>: <%= message.content %> at <%=
+          formatRelative(new Date(`${message?.createdAt}`),new Date()) %>
+        </p>
+        <% })%>
+      </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>

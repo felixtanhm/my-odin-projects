@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+  <%- include('./partials/head.ejs') %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <form method="POST" action="/new">
-      <label for="message">Message</label>
-      <input type="text" id="message" name="message" />
-      <button>Submit</button>
-    </form>
+    <header><h1><%= title %></h1></header>
+    <main>
+      <form method="POST" action="/new">
+        <label for="username">Name</label>
+        <input type="text" id="username" name="username" />
+        <label for="message">Message</label>
+        <input type="text" id="message" name="message" required />
+        <button>Submit</button>
+      </form>
+    </main>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>

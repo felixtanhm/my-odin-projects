@@ -1,8 +1,41 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding: 20px;
+}
+
+.message-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+  font-size: 24px;
+  color: black;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }

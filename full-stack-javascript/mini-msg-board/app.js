@@ -1,11 +1,23 @@
+require("dotenv").config();
 const createError = require("http-errors");
-const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const express = require("express");
+const mongoose = require("mongoose");
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+
+// Get DB variables from environment.
+const mongoDb = process.env.MONGO_DB;
+const mongoURI = process.env.MONGO_URI;
+const uri = `${mongoURI}/${mongoDb}?retryWrites=true&w=majority`;
+
+async function connectDB() {
+  await mongoose.connect(uri);
+  console.log("db connected");
+}
+connectDB().catch((err) => console.log(err));
 
 const app = express();
 
@@ -19,8 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(express.static("public"));
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
