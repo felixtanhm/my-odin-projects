@@ -7,13 +7,8 @@
 const app = require("../app");
 const debug = require("debug")("mini-msg-board:server");
 const http = require("http");
-
-/**
- * Get port from environment and store in Express.
- */
-
-const port = normalizePort(process.env.PORT || "3000");
-app.set("port", port);
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 /**
  * Create HTTP server.
@@ -22,10 +17,33 @@ app.set("port", port);
 const server = http.createServer(app);
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Get port from environment and store in Express.
  */
 
-server.listen(port);
+const port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
+
+// Get DB variables from environment.
+const mongoDb = process.env.MONGO_DB;
+const mongoURI = process.env.MONGO_URI;
+const uri = `${mongoURI}/${mongoDb}?retryWrites=true&w=majority`;
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+const connectDB = (async () => {
+  try {
+    const connectResult = await mongoose.connect(uri);
+    console.log("db connected");
+    server.listen(port, () => {
+      console.log("server running");
+    });
+    return connectResult;
+  } catch (err) {
+    onError(err);
+  }
+})();
+// server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
 
