@@ -4,20 +4,110 @@ body {
   align-items: center;
   justify-content: space-between;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 12px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap: 12px;
   align-items: center;
-  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.content-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.btn {
+  padding: 8px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #dfedff;
+  color: black;
+  border-radius: 4px;
+  border: 2px solid black;
+  height: 40px;
+  min-width: fit-content;
+  font-weight: 700;
 }
 
 .message-board {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  background-color: burlywood;
+  border: 12px solid black;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1;
+  padding: 12px;
+  background-color: yellow;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 0.8rem;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-date {
+  color: grey;
+  font-style: italic;
+}
+
+input {
+  padding: 4px;
+  border-radius: 4px;
+  height: 40px;
+}
+
+textarea {
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 120px;
+}
+
+label {
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -27,15 +117,50 @@ main {
   gap: 8px;
   width: 100%;
   padding: 12px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .fa-github {
   transition: transform 0.3s ease-in-out;
-  font-size: 24px;
+  font-size: 20px;
   color: black;
 }
 
 .fa-github:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+@media (min-width: 640px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .message-board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 16px solid black;
+    border-radius: 16px;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  main {
+    gap: 20px;
+  }
+
+  .message-board {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 20px solid black;
+    border-radius: 20px;
+    padding: 20px;
+  }
 }

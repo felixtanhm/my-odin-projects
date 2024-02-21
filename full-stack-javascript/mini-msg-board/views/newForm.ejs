@@ -5,11 +5,26 @@
     <header><h1><%= title %></h1></header>
     <main>
       <form method="POST" action="/new">
-        <label for="username">Name</label>
-        <input type="text" id="username" name="username" />
-        <label for="message">Message</label>
-        <input type="text" id="message" name="message" required />
-        <button>Submit</button>
+        <div class="input-group">
+          <label for="username">Name</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Name Optional"
+          />
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            required
+            placeholder="Type your message here"
+          ></textarea>
+        </div>
+        <button class="btn">Submit</button>
       </form>
     </main>
     <%- include('./partials/footer.ejs') %>

@@ -4,20 +4,30 @@
   <body>
     <header><h1><%= title %></h1></header>
     <main>
-      <p>Welcome to <%= title %></p>
-      <p>
-        Post messages to this board to motivate and inspire people who're
-        learning programming! <span>Let's make this a happy place :)</span>
-      </p>
-      <p>Total Messages Posted: <span><%= messageCount %></span></p>
-      <div class="message-board">
+      <section class="content">
+        <div class="content-head">
+          <p>We have <%= messageCount %> messages! 🥳</p>
+          <p>
+            Post messages to this board to motivate and inspire people who're
+            learning programming! <span>Let's make this a happy place :)</span>
+          </p>
+        </div>
+        <a class="btn" href="/new">New Post</a>
+      </section>
+      <section class="message-board">
         <% messages.map((message) => {%>
-        <p>
-          <span><%= message.username %></span>: <%= message.content %> at <%=
-          formatRelative(new Date(`${message?.createdAt}`),new Date()) %>
-        </p>
+        <div class="card">
+          <p class="card-content"><%= message.content %></p>
+          <div class="card-details">
+            <p class="card-title"><%= message.username %></p>
+            <p class="card-date">
+              <%= formatRelative(new Date(`${message?.createdAt}`),new Date())
+              %>
+            </p>
+          </div>
+        </div>
         <% })%>
-      </div>
+      </section>
     </main>
     <%- include('./partials/footer.ejs') %>
   </body>
