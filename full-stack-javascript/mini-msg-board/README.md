@@ -1,38 +1,29 @@
 # Mini Message Board 📋
 
-A Mini Message Board project to learn the basics of backend development.
+A Mini Message Board project to learn the basics of backend development. This is the first project I built that persists data in a database, and deployed. Learnt how to deploy safely (🤞) with env variables.
 
-![GIF Recording of Mini Message Board](basic-info-site.gif)
+![GIF Recording of Mini Message Board](mini-msg-board.gif)
 
 [**Live Demo**](#) ✨ |
 [**Odin's Project Specs**](https://www.theodinproject.com/lessons/nodejs-mini-message-board) 📝
 
 ## 🪃 Features
 
-- Feature1
-- Feature2
-- Feature3
+- Display messages
+- Store messages in database
+- Post messages
 
 #### 🧭 Future Implementations
 
-- Feature1
-- Feature2
-- Feature3
+- Sorting of messages
+- Message generation with AI
+- Improve styling
 
 ## 💻 Built With
 
-- React
+- NodeJS
 - Express
 - EJS
 - Mongoose
 - MongoDB
-- Tailwind CSS
-- Headless UI
-
-## 🚨 Usage (if applicable)
-
-```bash
-cd my-odin-projects/subfolder
-npm i
-npm run dev
-```
+- Railway
