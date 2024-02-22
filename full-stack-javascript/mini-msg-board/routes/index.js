@@ -7,7 +7,7 @@ const { formatRelative } = require("date-fns");
 router.get("/", async (req, res, next) => {
   try {
     const [messages, messageCount] = await Promise.all([
-      Message.find({}).exec(),
+      Message.find({}).sort({ createdAt: "desc" }).exec(),
       Message.countDocuments({}).exec(),
     ]);
     console.log(messages);
