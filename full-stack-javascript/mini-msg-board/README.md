@@ -4,7 +4,7 @@ A Mini Message Board project to learn the basics of backend development. This is
 
 ![GIF Recording of Mini Message Board](mini-msg-board.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://mini-msg-board.up.railway.app/) ✨ |
 [**Odin's Project Specs**](https://www.theodinproject.com/lessons/nodejs-mini-message-board) 📝
 
 ## 🪃 Features
