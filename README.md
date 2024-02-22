@@ -13,9 +13,11 @@ You can either navigate to the individual sections for more details, or view a s
 
 ---
 
-## Full Project List
+<details>
+<summary><strong>Full Project List</strong></summary>
 
-> **\*Rating** : This is used to denote the degree of polish and effort beyond the minimum project specifications.
+> [!NOTE]
+> Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
 
 #### **🎈 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
@@ -61,9 +63,12 @@ You can either navigate to the individual sections for more details, or view a s
 | **Messaging App**            | Full-stack                            | WIP        | WIP     |          |
 | **Odin-Book**                | Final project                         | WIP        | WIP     |          |
 
----
+</details>
 
 ---
+
+<details>
+<summary>Individual Project README Template</summary>
 
 # Individual Project README Template 🗂️
 
@@ -99,3 +104,5 @@ cd my-odin-projects/subfolder
 npm i
 npm run dev
 ```
+
+</details>
