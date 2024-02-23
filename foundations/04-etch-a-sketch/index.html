@@ -27,42 +27,39 @@
         <div id="selection-left">
           <div class="input-group">
             <label for="grid-input">Grid Size:</label>
-            <input id="grid-input" type="number" value="16" min="4" max="64" />
+            <input id="grid-input" type="number" value="12" min="4" max="64" />
           </div>
-          <button class="btn" value="grid-lines">
+          <button id="grid-lines-btn" class="active" value="grid-lines">
             <img src="./assets/icons/icon-grid-lines.svg" />
           </button>
-          <button class="btn" value="save">
+          <button value="save">
             <img src="./assets/icons/icon-download.svg" />
           </button>
         </div>
         <div id="selection-right">
-          <button value="color">
-            <span></span>
-            <input id="color-input" type="color" />
+          <button class="active" value="default">
+            <span id="color-display"></span>
+            <input id="color-input" type="color" value="#2A2E32" />
           </button>
-          <button class="btn" value="rainbow">
-            <span></span>
+          <button value="rainbow">
+            <span id="rainbow-display"></span>
           </button>
-          <button class="btn" value="erase">
+          <button value="erase">
             <img src="./assets/icons/icon-eraser.svg" />
           </button>
-          <button class="btn" value="clear">
+          <button value="clear">
             <img src="./assets/icons/icon-reset.svg" />
           </button>
         </div>
-        <!-- Align Right: Colors: Select Color | Rainbow Utils: Eraser Clear Align
-        Left: Grid Size | Grid Lines, Save -->
       </section>
       <section id="grid"></section>
     </main>
     <footer class="footer">
-      <p class="fab">© 2024 - Present | felixtanhm</p>
+      <p>© 2024 - Present | felixtanhm</p>
       <a
         href="https://www.github.com/felixtanhm"
         target="_blank"
         rel="noreferrer"
-        class="fab"
       >
         <i class="fab fa-github"></i>
       </a>
