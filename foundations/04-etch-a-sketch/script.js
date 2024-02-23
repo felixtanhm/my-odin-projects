@@ -1,10 +1,12 @@
 const defaultGrid = 16;
+const gridContainer = document.querySelector("#grid");
+const gridSliderText = document.querySelector("#selection-slider > label");
+const utilBtns = document.querySelectorAll("#selection-left > button");
+const gridBtns = document.querySelectorAll("#selection-right > button");
 
 let gridSize = defaultGrid;
-let gridContainer = document.querySelector("#grid");
-let gridSliderText = document.querySelector("#selection-slider > label");
-
-let gameMode = "default";
+let state = "default";
+let selectedColor = "#000";
 
 // Handles mouse interactions on the grid
 let mouseDown = false;
@@ -32,9 +34,9 @@ const generateGrid = (size) => {
 
 const colorGrid = (event) => {
   if (event.type === "mouseover" && !mouseDown) return;
-  if (gameMode === "default") {
-    event.target.style.backgroundColor = "#000";
-  } else if (gameMode === "rainbow") {
+  if (state === "default") {
+    event.target.style.backgroundColor = selectedColor;
+  } else if (state === "rainbow") {
     event.target.style.backgroundColor = generateColor();
   } else event.target.style.backgroundColor = "#fefefe";
 };
@@ -54,8 +56,8 @@ const clearGrid = () => {
 };
 
 const setState = (mode) => {
-  gameMode = mode;
-  document.querySelectorAll("#selection-buttons > button").forEach((button) => {
+  state = mode;
+  document.querySelectorAll("button").forEach((button) => {
     button.classList.remove("active");
     const buttonText = button.textContent.toLowerCase();
     if (buttonText === mode && buttonText !== "clear")
@@ -63,24 +65,35 @@ const setState = (mode) => {
   });
 };
 
-const handleClick = (e) => {
-  let button = e.target.textContent.toLowerCase();
-  button === "clear" ? clearGrid() : setState(button);
+const setColor = (event) => {
+  console.log(event.target.value);
+  selectedColor = e.target.value;
 };
 
-const handleSlide = (event) => {
+const handleClick = (button) => {
+  console.log("handle click");
+  console.log(button);
+  button.value === "clear" ? clearGrid() : setState(button.value);
+};
+
+const handleGridInput = (event) => {
+  console.log(event);
   gridSize = event.target.value;
-  gridSliderText.textContent = `${gridSize} x ${gridSize}`;
   clearGrid();
 };
 
 // Adds event listener to each button
-document.querySelectorAll("#selection-buttons > button").forEach((button) => {
-  button.addEventListener("click", handleClick);
+gridBtns.forEach((button) => {
+  button.addEventListener("click", () => handleClick(button));
 });
 
-// Adds event listener to grid size slider
-document.querySelector("#grid-slider").addEventListener("input", handleSlide);
+// Add event listener for color input change
+document.getElementById("color-input").addEventListener("change", setColor);
+
+// Adds event listener to grid size input
+document
+  .querySelector("#grid-input")
+  .addEventListener("change", handleGridInput);
 
 // Initializes grid state
 window.onload = () => {

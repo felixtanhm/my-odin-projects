@@ -21,23 +21,38 @@
   <body>
     <header>
       <h1>Etch a Sketch</h1>
-      <h4>Sketch your dreams! Hold down your mouse to draw.</h4>
     </header>
     <main>
       <section id="selection">
-        <div id="selection-slider">
-          <p>Grid Size:</p>
-          <input id="grid-slider" type="range" value="16" min="4" max="64" />
-          <label for="grid-slider">16 x 16</label>
+        <div id="selection-left">
+          <div class="input-group">
+            <label for="grid-input">Grid Size:</label>
+            <input id="grid-input" type="number" value="16" min="4" max="64" />
+          </div>
+          <button class="btn" value="grid-lines">
+            <img src="./assets/icons/icon-grid-lines.svg" />
+          </button>
+          <button class="btn" value="save">
+            <img src="./assets/icons/icon-download.svg" />
+          </button>
         </div>
-        <div id="selection-buttons">
-          <button id="default" class="btn active">Default</button>
-          <button id="rainbow" class="btn">Rainbow</button>
-          <button id="erase" class="btn">Eraser</button>
-          <button id="clear" class="btn">Clear</button>💾🏁🏳️‍🌈🧹🌈◼️🗑️✏️🧼
+        <div id="selection-right">
+          <button value="color">
+            <span></span>
+            <input id="color-input" type="color" />
+          </button>
+          <button class="btn" value="rainbow">
+            <span></span>
+          </button>
+          <button class="btn" value="erase">
+            <img src="./assets/icons/icon-eraser.svg" />
+          </button>
+          <button class="btn" value="clear">
+            <img src="./assets/icons/icon-reset.svg" />
+          </button>
         </div>
-        Align Right: Colors: Select Color | Rainbow Utils: Eraser Clear Align
-        Left: Grid Size | Grid Lines, Save
+        <!-- Align Right: Colors: Select Color | Rainbow Utils: Eraser Clear Align
+        Left: Grid Size | Grid Lines, Save -->
       </section>
       <section id="grid"></section>
     </main>
