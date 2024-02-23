@@ -9,17 +9,16 @@ The curriculum is split into 2 sections: **Foundations** and **Full Stack**.
 You can either navigate to the individual sections for more details, or view a summary of the full list of projects in table format below.
 
 **Navigation:**
-🎈 [Foundations](https://felixtanhm.github.io/my-odin-projects/foundations) | 🚀 [Full Stack Javascript](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript)
+🧸 [Foundations](https://felixtanhm.github.io/my-odin-projects/foundations) | 💥 [Full Stack Javascript](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript)
 
 ---
 
-<details>
-<summary><strong>Full Project List</strong></summary>
+## Full Project List
 
-> [!NOTE]
+> 👉 **Note**:
 > Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
 
-#### **🎈 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
+#### **🧸 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
 | Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating\* |
 | ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- |
@@ -31,12 +30,12 @@ You can either navigate to the individual sections for more details, or view a s
 
 ---
 
-#### **🚀 Full Stack JavaScript** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript#reflections--thoughts)
+#### **💥 Full Stack JavaScript** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript#reflections--thoughts)
 
 | Project                      | Topic(s)                              | Repository | Preview | Rating\* |
 | ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
 | **Sign-up Form**             | Forms                                 | WIP        | WIP     |          |
-| **Admin Dashboard**          | Grid                                  | WIP        | WIP     |          |
+| **Admin Dashboard**          | CSS Grid                              | WIP        | WIP     |          |
 | **Library**                  | Objects and Object constructors, OOP  | WIP        | WIP     |          |
 | **Tic Tac Toe**              | Factory functions and module patterns | WIP        | WIP     |          |
 | **Restaurant Page**          | ES6 modules, Webpack                  | WIP        | WIP     |          |
@@ -48,22 +47,18 @@ You can either navigate to the individual sections for more details, or view a s
 | **Knights Travails**         | Data structures and algorithms        | WIP        | -       |          |
 | **Testing Practice**         | Test Driven Development               | WIP        | -       |          |
 | **Battleship**               | Test Driven Development               | WIP        | WIP     |          |
-| **CV Application**           | React                                 | WIP        | WIP     |          |
+| **CV Application**           | React Basics                          | WIP        | WIP     |          |
 | **Memory Card**              | React Hooks                           | WIP        | WIP     |          |
 | **Shopping Cart**            | React Router, UI testing              | WIP        | WIP     |          |
-| **Photo Tagging App**        | Backend(Firebase)                     | WIP        | WIP     |          |
-| **JavaScript Final Project** | -                                     | WIP        | WIP     |          |
-| **Personal Portfolio**       | Responsive design, Accessibility      | WIP        | WIP     |          |
 | **Basic Informational Site** | Basic Node.js, Express                | WIP        | WIP     |          |
-| **Mini Message Board**       | Basic Express, Pug, MVC               | WIP        | WIP     |          |
+| **Mini Message Board**       | Basic Express, EJS, MVC, Mongoose     | WIP        | WIP     |          |
 | **Forms and Deployment**     | Express, Mongoose, Pug, Form-handling | WIP        | WIP     |          |
 | **Inventory Application**    | Express, Mongoose                     | WIP        | WIP     |          |
 | **Members Only**             | Authentication, sessions, cookies     | WIP        | WIP     |          |
 | **Blog API**                 | APIs, JWTs                            | WIP        | WIP     |          |
+| **Photo Tagging App**        | Full-stack                            | WIP        | WIP     |          |
 | **Messaging App**            | Full-stack                            | WIP        | WIP     |          |
-| **Odin-Book**                | Final project                         | WIP        | WIP     |          |
-
-</details>
+| **Odin-Book**                | Full-stack                            | WIP        | WIP     |          |
 
 ---
 

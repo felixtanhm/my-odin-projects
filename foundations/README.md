@@ -21,7 +21,7 @@ This folder stores the projects that were completed as part of the [**Foundation
 
 ### **Curriculum Projects**
 
-> [!NOTE]
+> 👉 **Note**:
 > Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
 
 | Project                 | Topic(s)                                      | Repository                                                                                            | Preview                                                                                     | Rating\* |
@@ -32,7 +32,7 @@ This folder stores the projects that were completed as part of the [**Foundation
 | **Etch-a-Sketch**       | JS Basics: Arrays, Loops and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐     |
 | **Calculator**          | JS Basics: Objects                            | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐⭐   |
 
-> [!NOTE]
+> 👉 **Note**:
 > Rock Paper Scissors was combined as part of another project: [Game Arcade](https://github.com/felixtanhm/game-arcade).
 
 ---
