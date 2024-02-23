@@ -10,15 +10,14 @@ A tool for drawing pixel based art built with HTML, CSS and Javascript. This pro
 ## 🪃 Features
 
 - Variable grid size.
+- Color picker
 - Rainbow filler
 - Eraser filler
+- Display Grid lines
 
 #### 🧭 Future Implementations
 
-- Color picker
 - Export image as PDF / Image
-- Display Grid lines
-- Make mobile responsive
 
 ## 💻 Built With
 
