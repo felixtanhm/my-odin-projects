@@ -1,6 +1,7 @@
 const defaultGrid = 12;
 const gridContainer = document.querySelector("#grid");
 const gridLinesBtn = document.getElementById("grid-lines-btn");
+const downloadBtn = document.getElementById("download-btn");
 const gridBtns = document.querySelectorAll("#selection-right > button");
 const colorDisplay = document.getElementById("color-display");
 
@@ -89,11 +90,42 @@ const handleGridInput = (event) => {
   clearGrid();
 };
 
+const createImg = () => {
+  const createdImg = document.createElement("canvas");
+  const imgContext = createdImg.getContext("2d");
+  gridContainer.appendChild(createdImg);
+  console.log("image appended");
+
+  document.querySelectorAll("grid-element").forEach((grid, i) => {
+    const row = Math.floor(i / gridSize);
+    console.log(row);
+
+    const col = i % gridSize;
+    console.log(col);
+
+    imgContext.fillStyle = grid.style.backgroundColor;
+    imgContext.fillRect(col * gridSize, row * gridSize, gridSize, gridSize);
+  });
+  downloadImg(createdImg.toDataURL());
+  createdImg.remove();
+};
+
+const downloadImg = (href) => {
+  const link = document.createElement("a");
+  link.download = "etch-a-sketch__felixtanhm-portfolio";
+  link.href = href;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  console.log("download initiated");
+};
+
 // Adds event listener to each button
 gridBtns.forEach((button) => {
   button.addEventListener("click", () => handleClick(button));
 });
 gridLinesBtn.addEventListener("click", toggleGridLines);
+downloadBtn.addEventListener("click", createImg);
 
 // Add event listener for color input change
 document.getElementById("color-input").addEventListener("change", setColor);
