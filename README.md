@@ -16,7 +16,7 @@ You can either navigate to the individual sections for more details, or view a s
 ## Full Project List
 
 > 👉 **Note**:
-> Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
+> \*Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
 
 #### **🧸 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
@@ -24,9 +24,9 @@ You can either navigate to the individual sections for more details, or view a s
 | ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- |
 | **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐       |
 | **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -        |
-| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐⭐   |
+| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐     |
 | **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐     |
-| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐⭐   |
+| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐       |
 
 ---
 

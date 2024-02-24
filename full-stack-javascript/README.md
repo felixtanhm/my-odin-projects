@@ -37,7 +37,8 @@ This folder stores the projects that were completed as part of the [**Full Stack
 
 ### **Curriculum Projects**
 
-> **\*Rating** : This is used to denote the degree of polish and effort beyond the minimum project specifications.
+> 👉 **Note**:
+> \*Rating : This is used to denote the degree of polish and effort beyond the minimum project specifications.
 
 | Project                      | Topic(s)                              | Repository | Preview | Rating\* |
 | ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
