@@ -25,7 +25,7 @@ const generateGrid = (size) => {
   gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
   for (let i = 0; i < size * size; i++) {
-    let singleGrid = document.createElement("div");
+    const singleGrid = document.createElement("div");
     singleGrid.classList.add("grid-element", "grid-lines");
     singleGrid.addEventListener("mouseover", colorGrid);
     singleGrid.addEventListener("mousedown", colorGrid);
@@ -94,17 +94,14 @@ const createImg = () => {
   const createdImg = document.createElement("canvas");
   const imgContext = createdImg.getContext("2d");
   gridContainer.appendChild(createdImg);
-  console.log("image appended");
-
-  document.querySelectorAll("grid-element").forEach((grid, i) => {
+  const gridWH = 1200 / gridSize;
+  createdImg.height = 1200;
+  createdImg.width = 1200;
+  document.querySelectorAll(".grid-element").forEach((grid, i) => {
     const row = Math.floor(i / gridSize);
-    console.log(row);
-
     const col = i % gridSize;
-    console.log(col);
-
-    imgContext.fillStyle = grid.style.backgroundColor;
-    imgContext.fillRect(col * gridSize, row * gridSize, gridSize, gridSize);
+    imgContext.fillStyle = grid.style.backgroundColor || "rgb(254,254,254)";
+    imgContext.fillRect(col * gridWH, row * gridWH, gridWH, gridWH);
   });
   downloadImg(createdImg.toDataURL());
   createdImg.remove();
@@ -117,7 +114,6 @@ const downloadImg = (href) => {
   document.body.appendChild(link);
   link.click();
   link.remove();
-  console.log("download initiated");
 };
 
 // Adds event listener to each button

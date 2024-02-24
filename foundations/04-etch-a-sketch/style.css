@@ -114,10 +114,10 @@ button:hover {
   border: 2px solid var(--border-color);
 }
 
-.grid-element {
+/* .grid-element {
   background-color: #fefefe;
   cursor: pointer;
-}
+} */
 
 .grid-lines {
   border: 1px solid var(--border-color-light);
