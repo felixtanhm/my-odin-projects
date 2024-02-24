@@ -18,7 +18,7 @@ Basic introduction to unit testing and Test Driven Development with Jest. Partic
 
 ```bash
 git clone git@github.com:felixtanhm/my-odin-projects.git
-cd testing-practice
+cd full-stack-javascript/testing-practice
 npm i
 npm run test
 ```

@@ -4,7 +4,7 @@ A basic info site built to learn the basics of NodeJS and Express.
 
 ![GIF Recording of Basic Info Site](basic-info-site.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**](https://basic-info-site.up.railway.app) ✨ |
 [**Odin's Project Specs**](https://www.theodinproject.com/lessons/nodejs-basic-informational-site) 📝
 
 ## 🪃 Features
