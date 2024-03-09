@@ -21,8 +21,8 @@
     </head>
     <body>
       <header>
-		<h1>📝 Fake Form</h1>
-	</header>
+        <h1>📝 Fake Form</h1>
+      </header>
       <main>
         <form id="form">
           <div class="flex flex-column">
@@ -39,18 +39,30 @@
           </div>
           <div class="flex flex-column">
             <label for="password">Password: </label>
-            <input required type="password" name="password" id="password" minlength="8"/>
+            <input
+              required
+              type="password"
+              name="password"
+              id="password"
+              minlength="8"
+            />
           </div>
           <div class="flex gap-8">
-            <input class="checkbox" required type="checkbox" name="terms" id="terms" />
+            <input
+              class="checkbox"
+              required
+              type="checkbox"
+              name="terms"
+              id="terms"
+            />
             <label class="font-weight-500" for="terms"
               >I agree to the pretend terms and conditions
             </label>
           </div>
-		  <div id="success-div" class="hidden">
-			<p id="title">Form Submitted! 😶‍🌫️</p>
-			<p>Your form has been submitted to nowhere!</p>
-		</div>
+          <div id="success-div" class="hidden">
+            <p id="title">Form Submitted! 😶‍🌫️</p>
+            <p>Your form has been submitted to nowhere!</p>
+          </div>
           <button id="submit">Submit</button>
         </form>
       </main>
@@ -64,7 +76,7 @@
           <i class="fab fa-github"></i>
         </a>
       </footer>
-	  <script src="./script.js"></script>
+      <script src="./script.js"></script>
     </body>
   </html>
 </html>
