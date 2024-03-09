@@ -1,0 +1,86 @@
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	background-color: #bed2da;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 8px;
+}
+
+label {
+	font-weight: 700;
+}
+
+input {
+	border-radius: 4px;
+	padding: 4px 8px;
+}
+
+.form-input {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.terms-group {
+	gap: 8px;
+}
+
+.terms {
+	font-weight: 500;
+}
+
+.checkbox {
+	width: 16px;
+	cursor: pointer;
+}
+
+button {
+	background-color: #1c4d84;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-weight: 700;
+	color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #2b324e;
+}
+
+.footer {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	padding: 12px;
+	font-size: 16px;
+}
+
+  .fa-github {
+	transition: transform 0.3s ease-in-out;
+	font-size: 20px;
+	color: black;
+  }
+
+  .fa-github:hover {
+	transform: rotate(360deg) scale(1.2);
+  }

@@ -20,28 +20,30 @@
       <title>Sign Up Form | felixtanhm portfolio</title>
     </head>
     <body>
-      <header>📝 Fake Form</header>
+      <header>
+		<h1>📝 Fake Form</h1>
+	</header>
       <main>
         <form action="" method="get">
-          <div class="form-input">
+          <div class="form-input flex-column">
             <label for="first-name">First Name: </label>
             <input required type="text" name="first-name" id="first-name" />
           </div>
-          <div class="form-input">
+          <div class="form-input flex-column">
             <label for="last-name">Last Name: </label>
             <input required type="text" name="last-name" id="last-name" />
           </div>
-          <div class="form-input">
+          <div class="form-input flex-column">
             <label for="email">Email: </label>
             <input required type="email" name="email" id="email" />
           </div>
-          <div class="form-input">
+          <div class="form-input flex-column">
             <label for="password">Password: </label>
             <input required type="password" name="password" id="password" />
           </div>
-          <div class="form-input">
-            <input required type="checkbox" name="terms" id="terms" />
-            <label for="terms"
+          <div class="form-input terms-group">
+            <input class="checkbox" required type="checkbox" name="terms" id="terms" />
+            <label class="terms" for="terms"
               >I agree to the pretend terms and conditions
             </label>
           </div>
