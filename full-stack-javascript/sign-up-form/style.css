@@ -18,7 +18,7 @@ form {
 	padding: 8px;
 }
 
-label {
+label, #title {
 	font-weight: 700;
 }
 
@@ -27,25 +27,8 @@ input {
 	padding: 4px 8px;
 }
 
-.form-input {
-	display: flex;
-}
-
-.flex-column {
-	flex-direction: column;
-}
-
-.terms-group {
-	gap: 8px;
-}
-
-.terms {
-	font-weight: 500;
-}
-
-.checkbox {
-	width: 16px;
-	cursor: pointer;
+input:focus {
+	border-color: #1c4d84;
 }
 
 button {
@@ -60,6 +43,39 @@ button {
 
 button:hover {
 	background-color: #2b324e;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.gap-8 {
+	gap: 8px;
+}
+
+.font-weight-500 {
+	font-weight: 500;
+}
+
+.checkbox {
+	width: 16px;
+	cursor: pointer;
+	accent-color: #1c4d84;
+}
+
+.hidden {
+	display: none;
+}
+
+#success-div {
+	background-color: green;
+	padding: 12px;
+	border-radius: 4px;
+	color: white;
 }
 
 .footer {
