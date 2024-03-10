@@ -19,29 +19,81 @@
       />
       <title>Admin Dashboard | felixtanhm portfolio</title>
     </head>
-    <body>
+    <body class="flex">
+      <aside class="flex flex-column">
+        <div class="flex logo">
+          <img src="./assets/felixtanhm-profile.jpeg" class="profile" />
+          <h1>felixtanhm</h1>
+        </div>
+        <nav class="flex flex-column">
+          <ul class="menu-group flex-column flex">
+            <li class="selected-menu">
+              <a href="" class="menu-item">Home</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/felixtanhm"
+                target="_blank"
+                rel="noreferrer"
+                class="menu-item"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/felixtanhm/my-odin-projects"
+                target="_blank"
+                rel="noreferrer"
+                class="menu-item"
+                >My Odin Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/felixtanhm/42-piscine"
+                target="_blank"
+                rel="noreferrer"
+                class="menu-item"
+                >42 SUTD</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/felixtanhm?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
+                class="menu-item"
+                >All Repositories</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-group flex-column flex last-menu">
+            <li class="menu-item disabled">Settings</li>
+            <li class="menu-item disabled">Support</li>
+            <li class="menu-item disabled">Privacy</li>
+            <li class="menu-item disabled">Log Out</li>
+          </ul>
+        </nav>
+      </aside>
       <main>
-        <section id="menu" class="desktop">
-          <div class="menu-item"></div>
-        </section>
-        <section id="content" class="desktop"></section>
-        <section class="mobile">
+        <section id="content"></section>
+        <section class="hidden">
           <div>
             <p>🖥️</p>
             <p>This project is viewable on desktop only.</p>
           </div>
         </section>
+        <footer class="footer">
+          <p>© 2024 - Present | felixtanhm</p>
+          <a
+            href="https://www.github.com/felixtanhm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </footer>
       </main>
-      <footer class="footer">
-        <p>© 2024 - Present | felixtanhm</p>
-        <a
-          href="https://www.github.com/felixtanhm"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-      </footer>
       <script src="./script.js"></script>
     </body>
   </html>
