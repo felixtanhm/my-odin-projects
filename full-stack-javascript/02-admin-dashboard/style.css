@@ -45,9 +45,23 @@ a {
   color: inherit;
 }
 
+input {
+  border: 1px solid black;
+  border-radius: 20px;
+  min-width: 400px;
+  padding: 4px 20px;
+  background-color: lightgray;
+}
+
+.icon {
+  width: 16px;
+  color: blue;
+}
+
 .menu-item {
   width: 100%;
-  display: block;
+  display: flex;
+  gap: 8px;
   padding: 8px 12px;
 }
 
