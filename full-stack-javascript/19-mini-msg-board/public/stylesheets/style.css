@@ -113,13 +113,13 @@ main {
 }
 
 input {
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 4px;
   height: 40px;
 }
 
 textarea {
-  padding: 4px;
+  padding: 4px 8px;
   border: 2px solid black;
   border-radius: 4px;
   height: 120px;
