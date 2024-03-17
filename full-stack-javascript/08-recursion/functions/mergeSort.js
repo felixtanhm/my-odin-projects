@@ -1,4 +1,4 @@
-function split(numArr) {
+function mergeSort(numArr) {
   if (numArr.length === 0) return "Array is empty";
   if (numArr.length === 1) return numArr;
 
@@ -6,10 +6,10 @@ function split(numArr) {
   const leftArr = numArr.slice(0, mid);
   const rightArr = numArr.slice(mid, numArr.length);
 
-  return mergeSort(split(leftArr), split(rightArr));
+  return sort(mergeSort(leftArr), mergeSort(rightArr));
 }
 
-function mergeSort(arr1, arr2) {
+function sort(arr1, arr2) {
   if (arr1 === undefined) return arr2;
   if (arr2 === undefined) return arr1;
 
@@ -18,7 +18,7 @@ function mergeSort(arr1, arr2) {
   let r = 0;
 
   while (l < arr1.length && r < arr2.length) {
-    if (arr1[l] < arr2[r]) {
+    if (arr1[l] <= arr2[r]) {
       result.push(arr1[l]);
       l++;
     } else {
@@ -40,4 +40,4 @@ function mergeSort(arr1, arr2) {
   return result;
 }
 
-console.log(split([5, 3, 4, 1, 2]));
+export { mergeSort };
