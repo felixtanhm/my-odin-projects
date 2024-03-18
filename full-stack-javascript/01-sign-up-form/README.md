@@ -1,6 +1,6 @@
 # Sign Up Form 📝
 
-A sign up form to learn more about form validations and submissions.
+A simple sign up form to learn more about form validations and managing submissions. For aesthetical reasons, form methods have been excluded with `preventDefault` and the submission event is handled with javascript instead.
 
 ![GIF Recording of Sign Up Form](sign-up-form.gif)
 
