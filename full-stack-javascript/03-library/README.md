@@ -4,7 +4,7 @@ A simple cataloging application to store saved objects. This project serves to f
 
 ![GIF Recording of Library](library.gif)
 
-[**Live Demo**](#) ✨ |
+[**Live Demo**]() ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/node-path-javascript-library) 📝
 
 ## 🪃 Features
