@@ -15,18 +15,26 @@ You can either navigate to the individual sections for more details, or view a s
 
 ## Full Project List
 
-> 👉 **Note**:
-> \*Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
+With the exception of styling and additional noted features, most projects have been left as is. Any additional features implemented are noted in the project's README, and are not typically required by the project specifications in The Odin Project. This is typically noted by the ⭐ Rating column.
+
+This is to accurately reflect my knowledge of web development at the point of tackling the project for visitors to this repository. Future learners of The Odin Project will also be able to see what is a fair expectation of the finished project.
+
+⭐ **Rating Definitions**:
+
+- Empty: Meets minimum requirements, minimum styling
+- ⭐: Effort has been applied to styling, some low effort additional features
+- ⭐⭐: Has additional features applied, some edge cases have been tested for
+- ⭐⭐⭐: Proud of these. Comprehensive feature set and well tested. A keystone piece! ✨
 
 #### **🧸 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
-| Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating\* |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- |
-| **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐       |
-| **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -        |
-| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐     |
-| **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐     |
-| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐       |
+| Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating |
+| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------ |
+| **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐     |
+| **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -      |
+| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐   |
+| **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐   |
+| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐   |
 
 ---
 
@@ -34,10 +42,10 @@ You can either navigate to the individual sections for more details, or view a s
 
 | Project                      | Topic(s)                              | Repository | Preview | Rating\* |
 | ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
-| **Sign-up Form**             | Forms                                 | WIP        | WIP     |          |
-| **Admin Dashboard**          | CSS Grid                              | WIP        | WIP     |          |
-| **Library**                  | Objects and Object constructors, OOP  | WIP        | WIP     |          |
-| **Tic Tac Toe**              | Factory functions and module patterns | WIP        | WIP     |          |
+| **Sign-up Form**             | Forms                                 | WIP        | WIP     | ⭐       |
+| **Admin Dashboard**          | CSS Grid                              | WIP        | WIP     | -        |
+| **Library**                  | Objects and Object constructors, OOP  | WIP        | WIP     | -        |
+| **Tic Tac Toe**              | Factory functions and module patterns | WIP        | WIP     | ⭐⭐     |
 | **Restaurant Page**          | ES6 modules, Webpack                  | WIP        | WIP     |          |
 | **Todo List**                | SOLID principles                      | WIP        | WIP     |          |
 | **Weather App**              | Asynchronous JavaScript and APIs      | WIP        | WIP     |          |

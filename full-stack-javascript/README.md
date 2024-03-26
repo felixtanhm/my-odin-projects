@@ -37,20 +37,30 @@ This folder stores the projects that were completed as part of the [**Full Stack
 
 ### **Curriculum Projects**
 
-> 👉 **Note**: \*Rating is used to denote the degree of polish and effort beyond the minimum project specifications.
+With the exception of styling and additional noted features, most projects have been left as is. Any additional features implemented are noted in the project's README, and are not typically required by the project specifications in The Odin Project. This is typically noted by the ⭐ Rating column.
+
+This is to accurately reflect my knowledge of web development at the point of tackling the project for visitors to this repository. Future learners of The Odin Project will also be able to see what is a fair expectation of the finished project.
+
+⭐ **Rating Definitions**:
+
+- Empty: Meets minimum requirements, minimum styling
+- ⭐: Effort has been applied to styling, some low effort additional features
+- ⭐⭐: Has additional features applied, some edge cases have been tested for
+- ⭐⭐⭐: Proud of these. Comprehensive feature set and well tested. A keystone piece! ✨
 
 | Project                      | Topic(s)                              | Repository                                                                                                     | Preview                                                                                      | Rating\* |
 | ---------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------- |
 | **Sign-up Form**             | Forms                                 | [Code](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript/01-sign-up-form)         | [Demo](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript/01-sign-up-form/) |          |
-| **Admin Dashboard**          | Grid                                  | WIP                                                                                                            | WIP                                                                                          |          |
+| **Admin Dashboard**          | CSS Grid                              | WIP                                                                                                            | WIP                                                                                          |          |
 | **Library**                  | Objects and Object constructors, OOP  | WIP                                                                                                            | WIP                                                                                          |          |
-| **Tic Tac Toe**              | Factory functions and module patterns | [Code](https://github.com/felixtanhm/game-arcade)                                                              | [Demo](https://game-arcade.pages.dev/)                                                       |          |
+| **Tic Tac Toe**              | Factory functions and module patterns | [Code](https://github.com/felixtanhm/game-arcade)                                                              | [Demo](https://game-arcade.pages.dev/)                                                       | ⭐⭐     |
 | **Restaurant Page**          | ES6 modules, Webpack                  | WIP                                                                                                            | WIP                                                                                          |          |
 | **Todo List**                | SOLID principles                      | WIP                                                                                                            | WIP                                                                                          |          |
 | **Weather App**              | Asynchronous JavaScript and APIs      | WIP                                                                                                            | WIP                                                                                          |          |
+| **Fibonacci**                | Recursion                             | WIP                                                                                                            | -                                                                                            |          |
 | **Merge Sort**               | Recursion                             | WIP                                                                                                            | -                                                                                            |          |
 | **Linked Lists**             | Data structures and algorithms        | WIP                                                                                                            | -                                                                                            |          |
-| **HashedMap**                | Data structures and algorithms        | WIP                                                                                                            | -                                                                                            |          |
+| **HashMap**                  | Data structures and algorithms        | WIP                                                                                                            | -                                                                                            |          |
 | **Binary Search Trees**      | Data structures and algorithms        | WIP                                                                                                            | -                                                                                            |          |
 | **Knights Travails**         | Data structures and algorithms        | WIP                                                                                                            | -                                                                                            |          |
 | **Testing Practice**         | Test Driven Development               | [Code](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript/13-testing-practice)     | -                                                                                            |          |
