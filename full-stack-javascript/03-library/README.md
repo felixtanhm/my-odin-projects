@@ -2,9 +2,9 @@
 
 A simple cataloging application to store saved objects. This project serves to familiarise using object constructors to add, modify and remove objects from a list.
 
-![GIF Recording of Library](library.gif)
+![GIF Recording of Library](./library.gif)
 
-[**Live Demo**]() ✨ |
+[**Live Demo**](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript/01-library/) ✨ |
 [**Project Specs**](https://www.theodinproject.com/lessons/node-path-javascript-library) 📝
 
 ## 🪃 Features
