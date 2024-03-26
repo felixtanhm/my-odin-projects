@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px;
+}
+
+main {
+  background-color: #00000010;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Elements */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 20%;
+  gap: 8px;
+  width: fit-content;
+  min-width: 280px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.modal .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Card */
+#card-container {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px;
+}
+
+#card-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  max-width: 300px;
+  min-height: 240px;
+}
+
+.status {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 2px 6px;
+  width: fit-content;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.read {
+  background-color: #a5f1db4c;
+  border-color: #239675;
+}
+
+.unread {
+  background-color: #c49e614f;
+  border-color: #a9792b;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+
+.btn {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.btn-close {
+  padding: 8px 12px;
+  background: #00000020;
+  border-radius: 50%;
+}
+
+.btn-read {
+  min-width: 148px;
+}
+
+.btn-delete {
+  background-color: #80000080;
+}
+
+.btn-delete:hover {
+  background-color: #800000;
+}

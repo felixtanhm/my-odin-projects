@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A small app to create objects built with Javascript to learn about Object Constructors and Classes as part of The Odin Project curriculum. A felixtanhm portfolio"
+    />
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Librar | felixtanhm portfolioy</title>
+  </head>
+  <body>
+    <header>
+      <h1>Library</h1>
+      <button class="btn add-new modal-toggle">Add New Book</button>
+    </header>
+    <main>
+      <div id="card-container"></div>
+    </main>
+    <section class="modal hidden">
+      <div class="header">
+        <h3>Add A New Book</h3>
+        <button class="btn btn-close modal-toggle">X</button>
+      </div>
+      <form id="new-book-form">
+        <label for="book-title">Title</label>
+        <input type="text" id="book-title" placeholder="Book Title" required />
+        <label for="book-desc">Description</label>
+        <input
+          type="text"
+          id="book-desc"
+          placeholder="Book Description"
+          required
+        />
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </section>
+    <div class="overlay hidden modal-toggle"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
