@@ -28,45 +28,45 @@ This is to accurately reflect my knowledge of web development at the point of ta
 
 #### **🧸 Foundations** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/foundations#reflections--thoughts)
 
-| Project                 | Topic(s)                               | Repository                                                                                            | Preview                                                                                     | Rating |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------ |
-| **Recipe Site**         | HTML / CSS Foundations                 | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐     |
-| **Landing Page**        | Flexbox                                | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -      |
-| **Rock Paper Scissors** | JS Basics: Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐   |
-| **Etch-a-Sketch**       | JS Basics: Arrays and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐   |
-| **Calculator**          | JS Basics: Objects                     | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐   |
+| Project                 | Topic(s)                                      | Repository                                                                                            | Preview                                                                                     | Rating |
+| ----------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------ |
+| **Recipe Site**         | Command Line Basics, Git Basics, Basic HTML   | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/01-recipe-site)            | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/01-recipe-site)            | ⭐     |
+| **Landing Page**        | CSS Cascade, CSS Flexbox                      | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/02-landing-page)           | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/02-landing-page)           | -      |
+| **Rock Paper Scissors** | JS Basics: Types, Functions and Conditionals  | [Code](https://github.com/felixtanhm/game-arcade)                                                     | [Demo](https://game-arcade.pages.dev/)                                                      | ⭐⭐   |
+| **Etch-a-Sketch**       | JS Basics: Arrays, Loops and DOM Manipulation | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/04-etch-a-sketch)          | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/04-etch-a-sketch)          | ⭐⭐   |
+| **Calculator**          | JS Basics: Objects                            | [Code](https://github.com/felixtanhm/my-odin-project/tree/main/foundations/05-calculator-%5BFINAL%5D) | [Demo](https://felixtanhm.github.io/my-odin-projects/foundations/05-calculator-%5BFINAL%5D) | ⭐⭐   |
 
 ---
 
 #### **💥 Full Stack JavaScript** | [Reflections and Thoughts](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript#reflections--thoughts)
 
-| Project                      | Topic(s)                              | Repository | Preview | Rating\* |
-| ---------------------------- | ------------------------------------- | ---------- | ------- | -------- |
-| **Sign-up Form**             | Forms                                 | WIP        | WIP     | ⭐       |
-| **Admin Dashboard**          | CSS Grid                              | WIP        | WIP     | -        |
-| **Library**                  | Objects and Object constructors, OOP  | WIP        | WIP     | -        |
-| **Tic Tac Toe**              | Factory functions and module patterns | WIP        | WIP     | ⭐⭐     |
-| **Restaurant Page**          | ES6 modules, Webpack                  | WIP        | WIP     |          |
-| **Todo List**                | SOLID principles                      | WIP        | WIP     |          |
-| **Weather App**              | Asynchronous JavaScript and APIs      | WIP        | WIP     |          |
-| **Merge Sort**               | Recursion                             | WIP        | -       |          |
-| **Linked Lists**             | Data structures and algorithms        | WIP        | -       |          |
-| **Binary Search Trees**      | Data structures and algorithms        | WIP        | -       |          |
-| **Knights Travails**         | Data structures and algorithms        | WIP        | -       |          |
-| **Testing Practice**         | Test Driven Development               | WIP        | -       |          |
-| **Battleship**               | Test Driven Development               | WIP        | WIP     |          |
-| **CV Application**           | React Basics                          | WIP        | WIP     |          |
-| **Memory Card**              | React Hooks                           | WIP        | WIP     |          |
-| **Shopping Cart**            | React Router, UI testing              | WIP        | WIP     |          |
-| **Basic Informational Site** | Basic Node.js, Express                | WIP        | WIP     |          |
-| **Mini Message Board**       | Basic Express, EJS, MVC, Mongoose     | WIP        | WIP     |          |
-| **Forms and Deployment**     | Express, Mongoose, Pug, Form-handling | WIP        | WIP     |          |
-| **Inventory Application**    | Express, Mongoose                     | WIP        | WIP     |          |
-| **Members Only**             | Authentication, sessions, cookies     | WIP        | WIP     |          |
-| **Blog API**                 | APIs, JWTs                            | WIP        | WIP     |          |
-| **Photo Tagging App**        | Full-stack                            | WIP        | WIP     |          |
-| **Messaging App**            | Full-stack                            | WIP        | WIP     |          |
-| **Odin-Book**                | Full-stack                            | WIP        | WIP     |          |
+| Project                      | Topic(s)                              | Repository                                                                                             | Preview                                                                                      | Rating\* |
+| ---------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------- |
+| **Sign-up Form**             | Forms                                 | [Code](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript/01-sign-up-form) | [Demo](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript/01-sign-up-form/) | ⭐       |
+| **Admin Dashboard**          | CSS Grid                              | WIP                                                                                                    | WIP                                                                                          |          |
+| **Library**                  | Objects and Object constructors, OOP  | [Code](https://github.com/felixtanhm/my-odin-projects/tree/main/full-stack-javascript/03-library)      | [Demo](https://felixtanhm.github.io/my-odin-projects/full-stack-javascript/03-library/)      | -        |
+| **Tic Tac Toe**              | Factory functions and module patterns | WIP                                                                                                    | WIP                                                                                          | ⭐⭐     |
+| **Restaurant Page**          | ES6 modules, Webpack                  | WIP                                                                                                    | WIP                                                                                          |          |
+| **Todo List**                | SOLID principles                      | WIP                                                                                                    | WIP                                                                                          |          |
+| **Weather App**              | Asynchronous JavaScript and APIs      | WIP                                                                                                    | WIP                                                                                          |          |
+| **Merge Sort**               | Recursion                             | WIP                                                                                                    | -                                                                                            | -        |
+| **HashMap**                  | Data structures and algorithms        | WIP                                                                                                    | -                                                                                            |          |
+| **Linked Lists**             | Data structures and algorithms        | WIP                                                                                                    | -                                                                                            |          |
+| **Binary Search Trees**      | Data structures and algorithms        | WIP                                                                                                    | -                                                                                            |          |
+| **Knights Travails**         | Data structures and algorithms        | WIP                                                                                                    | -                                                                                            |          |
+| **Testing Practice**         | Test Driven Development               | WIP                                                                                                    | -                                                                                            |          |
+| **Battleship**               | Test Driven Development               | WIP                                                                                                    | WIP                                                                                          |          |
+| **CV Application**           | React Basics                          | WIP                                                                                                    | WIP                                                                                          | -        |
+| **Memory Card**              | React Hooks                           | WIP                                                                                                    | WIP                                                                                          |          |
+| **Shopping Cart**            | React Router, UI testing              | WIP                                                                                                    | WIP                                                                                          |          |
+| **Basic Informational Site** | Basic Node.js, Express                | WIP                                                                                                    | WIP                                                                                          | ⭐       |
+| **Mini Message Board**       | Basic Express, EJS, MVC, Mongoose     | WIP                                                                                                    | WIP                                                                                          | ⭐⭐     |
+| **Forms and Deployment**     | Express, Mongoose, Pug, Form-handling | WIP                                                                                                    | WIP                                                                                          | -        |
+| **Inventory Application**    | Express, Mongoose                     | WIP                                                                                                    | WIP                                                                                          |          |
+| **Members Only**             | Authentication, sessions, cookies     | WIP                                                                                                    | WIP                                                                                          |          |
+| **Blog API**                 | APIs, JWTs                            | WIP                                                                                                    | WIP                                                                                          |          |
+| **Messaging App**            | Full-stack                            | WIP                                                                                                    | WIP                                                                                          |          |
+| **Odin-Book**                | Full-stack                            | WIP                                                                                                    | WIP                                                                                          |          |
 
 ---
 
