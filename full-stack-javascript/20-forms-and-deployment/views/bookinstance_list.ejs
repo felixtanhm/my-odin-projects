@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1 class=""><%= title %></h1>
+        <% if (bookinstance_list.length) { %>
+        <ul>
+          <% bookinstance_list.forEach(instance => { %>
+          <li>
+            <a href="<%= instance.url %>"
+              ><%= instance.book.title %>: <%= instance.imprint %></a
+            >
+            <% if (instance.status == 'Available') { %>
+            <span class="text-success"><%= instance.status %></span>
+            <% } else if( instance.status == 'Maintenance') { %>
+            <span class="text-danger"><%= instance.status %></span>
+            <% } else { %>
+            <span class="text-warning"><%= instance.status %></span>
+            <% } %> <% if (instance.span != 'Available') { %>
+            <span
+              >(Due: <%= formatRelative(new Date(`${instance?.due_back}`), new
+              Date()) %> )</span
+            >
+            <% } %>
+          </li>
+          <% }) %>
+        </ul>
+        <%} else { %>
+        <p>There are no book copies in this library.</p>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>

@@ -40,7 +40,7 @@ exports.book_list = async function (req, res, next) {
       .sort({ title: 1 })
       .populate("author")
       .exec();
-
+    console.log(allBooks[0]);
     res.render("book_list", { title: "Book List", book_list: allBooks });
   } catch (error) {
     return next(error);

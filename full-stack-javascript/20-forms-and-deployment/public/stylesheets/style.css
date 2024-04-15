@@ -40,6 +40,18 @@ a:hover {
   flex-direction: column;
 }
 
+.text-success {
+  color: darkgreen;
+}
+
+.text-warning {
+  color: darkorange;
+}
+
+.text-danger {
+  color: darkred;
+}
+
 footer {
   grid-column-start: 1;
   grid-column-end: 9;

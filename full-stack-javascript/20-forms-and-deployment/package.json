@@ -9,6 +9,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.19",
     "cookie-parser": "~1.4.4",
+    "date-fns": "^3.6.0",
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",
     "ejs": "~2.6.1",
