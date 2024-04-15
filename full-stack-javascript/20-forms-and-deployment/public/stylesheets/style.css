@@ -1,14 +1,64 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: clamp(220px, 25%, 280px) 1fr;
+}
+
+nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 20px;
+  background-color: #363740;
+  color: #a4a6b3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 20px;
 }
 
 a {
-  color: #00b7ff;
+  text-decoration: none;
+  color: inherit;
 }
 
-.sidebar-nav {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
+a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  height: fit-content;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+  font-size: 20px;
+  color: black;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }

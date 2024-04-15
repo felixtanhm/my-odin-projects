@@ -2,24 +2,25 @@
 <html>
   <%- include('./partials/header') %>
   <body>
-    <div class=""><%- include('./partials/nav.ejs') %></div>
-    <div class="">
-      <h1><%= title %></h1>
-      <p>
-        Welcome to <%= title %>, a very basic Express website developed as a
-        tutorial example on the Mozilla Developer Network.
-      </p>
-
-      <h2>Dynamic Content</h2>
-      <p>The library has the following record counts:</p>
-      <ul>
-        <li>Books: <%= book_count %></li>
-        <li>Copies: <%= book_instance_count %></li>
-        <li>Copies Available: <%= book_instance_available_count %></li>
-        <li>Authors: <%= author_count %></li>
-        <li>Genres: <%= genre_count %></li>
-      </ul>
-    </div>
-    <%- include('./partials/footer') %>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1 class=""><%= title %></h1>
+        <p>
+          Welcome to <%= title %>, a very basic Express website developed as a
+          tutorial example on the Mozilla Developer Network.
+        </p>
+        <h2>Dynamic Content</h2>
+        <p>The library has the following record counts:</p>
+        <ul>
+          <li>Books: <%= book_count %></li>
+          <li>Copies: <%= book_instance_count %></li>
+          <li>Copies Available: <%= book_instance_available_count %></li>
+          <li>Authors: <%= author_count %></li>
+          <li>Genres: <%= genre_count %></li>
+        </ul>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
   </body>
 </html>

@@ -2,10 +2,12 @@
 <html>
   <%- include('./partials/header') %>
   <body>
-    <div class="col-sm-2"><%- include('nav.ejs') %></div>
-    <div class="col-sm-10">
-      <!-- Block content -->
-    </div>
-    <%- include('./partials/footer') %>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <!-- Block Content -->
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
   </body>
 </html>
