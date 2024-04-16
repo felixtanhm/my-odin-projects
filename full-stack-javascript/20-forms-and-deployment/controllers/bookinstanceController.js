@@ -150,7 +150,7 @@ exports.bookinstance_update_get = async function (req, res, next) {
       Book.find({}, "title").sort({ title: 1 }).exec(),
     ]);
     res.render("bookinstance_form", {
-      title: "Create BookInstance",
+      title: "Update Copy",
       book_list: allBooks,
       selected_book: bookinstance.book._id,
       errors: null,

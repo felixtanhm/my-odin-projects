@@ -27,7 +27,7 @@
               name="family_name"
               id="family_name"
               placeholder="ex. Smith"
-              value="<%= locals.author ? author.family_name : '' %>"
+              value="<%= author ? author.family_name : '' %>"
             />
           </div>
           <div class="input-group">
@@ -37,7 +37,7 @@
               name="date_of_birth"
               id="date_of_birth"
               placeholder="dd/mm/yyyy"
-              value="<%= locals.author ? author.date_of_birth_yyyy_mm_dd : '' %>"
+              value="<%= author ? author.date_of_birth : '' %>"
             />
           </div>
           <div class="input-group">
@@ -47,7 +47,7 @@
               name="date_of_death"
               id="date_of_death"
               placeholder="dd/mm/yyyy"
-              value="<%= locals.author ? author.date_of_death_yyyy_mm_dd : '' %>"
+              value="<%= author ? author.date_of_death : '' %>"
             />
           </div>
           <button type="submit">Submit</button>
