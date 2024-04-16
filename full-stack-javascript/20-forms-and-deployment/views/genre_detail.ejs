@@ -18,6 +18,12 @@
         <%} else { %>
         <p>There are no books.</p>
         <% } %>
+        <div class="cta">
+          <a class="button del" href="<%= genre.url %>/delete">Delete Genre</a>
+          <a class="button update" href="<%= genre.url %>/update"
+            >Update Genre</a
+          >
+        </div>
       </div>
       <%- include('./partials/footer') %>
     </main>

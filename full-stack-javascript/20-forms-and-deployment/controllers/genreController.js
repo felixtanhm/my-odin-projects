@@ -32,6 +32,7 @@ exports.genre_detail = async function (req, res, next) {
 
     res.render("genre_detail", {
       title: `Genre Detail: ${genre.name}`,
+      genre: genre,
       genre_books: booksInGenre,
     });
   } catch (error) {
@@ -99,7 +100,22 @@ exports.genre_create_post = [
 // Display Genre delete form on GET.
 exports.genre_delete_get = async function (req, res, next) {
   try {
-    res.send("NOT IMPLEMENTED: Genre delete GET");
+    // Get details of genre and all the books (in parallel)
+    const [genre, allBooksByGenre] = await Promise.all([
+      Genre.findById(req.params.id).exec(),
+      Book.find({ genre: req.params.id }, "title summary").exec(),
+    ]);
+
+    if (genre === null) {
+      // No results.
+      res.redirect("/catalog/genres");
+    }
+
+    res.render("genre_delete", {
+      title: "Delete Genre",
+      genre: genre,
+      genre_books: allBooksByGenre,
+    });
   } catch (error) {
     return next(error);
   }
@@ -108,7 +124,25 @@ exports.genre_delete_get = async function (req, res, next) {
 // Handle Genre delete on POST.
 exports.genre_delete_post = async function (req, res, next) {
   try {
-    res.send("NOT IMPLEMENTED: Genre delete POST");
+    // Get details of genre and all the books (in parallel)
+    const [genre, allBooksByGenre] = await Promise.all([
+      Genre.findById(req.params.id).exec(),
+      Book.find({ genre: req.params.id }, "title summary").exec(),
+    ]);
+
+    if (allBooksByGenre.length > 0) {
+      // Genre has books. Render in same way as for GET route.
+      res.render("genre_delete", {
+        title: "Delete Genre",
+        genre: genre,
+        genre_books: allBooksByGenre,
+      });
+      return;
+    } else {
+      // Genre has no books. Delete object and redirect to the list of genres.
+      await Genre.findByIdAndDelete(req.body.genreid);
+      res.redirect("/catalog/genres");
+    }
   } catch (error) {
     return next(error);
   }

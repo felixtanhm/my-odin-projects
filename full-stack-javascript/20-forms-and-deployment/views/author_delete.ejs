@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1>Author: <%= author.name %></h1>
+        <p><%= author.life %></p>
+        <br />
+
+        <% if (author_books.length) { %>
+        <p>
+          Delete the following books before attempting to delete this author.
+        </p>
+        <h2>Books</h2>
+        <% author_books.forEach(book => { %>
+        <a class="text-success" href="<%= book.url %>"><%= book.title %></a>
+        <p><%= book.summary %></p>
+        <% }) %> <% } else { %>
+        <p>Do you really want to delete this Author?</p>
+        <form action="" method="post">
+          <input
+            type="hidden"
+            name="authorid"
+            id="authorid"
+            value="<%= author._id %>"
+          />
+          <button type="submit">Delete</button>
+        </form>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>
