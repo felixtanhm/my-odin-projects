@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1><%= title %></h1>
+        <form action="" method="post">
+          <div class="input-group">
+            <label for="name">Genre:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Fantasy, Poetry etc."
+              required
+              value="<%= genre ? genre.name : '' %>"
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <% if (errors?.length) { %>
+        <h3 id="error-heading">Error: Invalid form data!</h3>
+        <ul id="errors">
+          <% errors.forEach(err => { %>
+          <li><%= err.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>

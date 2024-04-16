@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1><%= title %></h1>
+
+        <form action="" method="post">
+          <div class="input-group">
+            <label for="first_name">First Name:</label>
+            <input
+              type="text"
+              required
+              name="first_name"
+              id="first_name"
+              placeholder="ex. John"
+              value="<%= author ? author.first_name : '' %>"
+            />
+          </div>
+          <div class="input-group">
+            <label for="family_name">Family Name:</label>
+            <input
+              type="text"
+              required
+              name="family_name"
+              id="family_name"
+              placeholder="ex. Smith"
+              value="<%= locals.author ? author.family_name : '' %>"
+            />
+          </div>
+          <div class="input-group">
+            <label for="date_of_birth">Date of Birth:</label>
+            <input
+              type="date"
+              name="date_of_birth"
+              id="date_of_birth"
+              placeholder="dd/mm/yyyy"
+              value="<%= locals.author ? author.date_of_birth_yyyy_mm_dd : '' %>"
+            />
+          </div>
+          <div class="input-group">
+            <label for="date_of_death">Date of Death:</label>
+            <input
+              type="date"
+              name="date_of_death"
+              id="date_of_death"
+              placeholder="dd/mm/yyyy"
+              value="<%= locals.author ? author.date_of_death_yyyy_mm_dd : '' %>"
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+
+        <% if (errors?.length) { %>
+        <h3 id="error-heading">Error: Invalid form data!</h3>
+        <ul id="errors">
+          <% errors.forEach(err => { %>
+          <li><%= err.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>
