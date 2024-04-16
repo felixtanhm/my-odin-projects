@@ -40,6 +40,28 @@ a:hover {
   flex-direction: column;
 }
 
+.cta {
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px;
+  border-radius: 4px;
+  color: white;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.del {
+  background-color: darkred;
+}
+
+.update {
+  background-color: #363740;
+}
+
 .text-success {
   color: darkgreen;
   font-weight: 700;

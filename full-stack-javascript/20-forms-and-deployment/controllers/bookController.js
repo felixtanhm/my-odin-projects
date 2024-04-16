@@ -50,7 +50,24 @@ exports.book_list = async function (req, res, next) {
 // Display detail page for a specific book.
 exports.book_detail = async function (req, res, next) {
   try {
-    res.send(`NOT IMPLEMENTED: Book detail: ${req.params.id}`);
+    // Get details of books, book instances for specific book
+    const [book, bookInstances] = await Promise.all([
+      Book.findById(req.params.id).populate("author").populate("genre").exec(),
+      BookInstance.find({ book: req.params.id }).exec(),
+    ]);
+
+    if (book === null) {
+      // No results.
+      const err = new Error("Book not found");
+      err.status = 404;
+      return next(err);
+    }
+
+    res.render("book_detail", {
+      title: book.title,
+      book: book,
+      book_instances: bookInstances,
+    });
   } catch (error) {
     return next(error);
   }

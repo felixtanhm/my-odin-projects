@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <% if (instance) { %>
+        <h1>ID: <%= instance.id %></h1>
+
+        <p>
+          Title:
+          <a href="<%= instance.book.url %>"><%= instance.book.title %></a>
+        </p>
+        <p>Imprint: <%= instance.imprint %></p>
+        <p>
+          Status: <% if (instance.status == 'Available') { %>
+          <span class="text-success"><%= instance.status %></span>
+          <% } else if( instance.status == 'Maintenance') { %>
+          <span class="text-danger"><%= instance.status %></span>
+          <% } else { %>
+          <span class="text-warning"><%= instance.status %></span>
+          <% } %>
+        </p>
+
+        <% if (instance.status != 'Available') { %>
+        <span>Due back: <%= instance.due_date %></span>
+        <% } %> <% } else { %>
+        <p>Instance not found.</p>
+        <% } %>
+
+        <div class="cta">
+          <a class="button del" href="<%= instance.url %>/delete"
+            >Delete Copy</a
+          >
+          <a class="button update" href="<%= instance.url %>/update"
+            >Update Copy</a
+          >
+        </div>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>

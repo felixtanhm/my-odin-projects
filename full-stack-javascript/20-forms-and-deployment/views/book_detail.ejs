@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1>Title: <%= book.title %></h1>
+        <h3>
+          Author: <a href="<%= book.author.url %>"><%= book.author.name %></a>
+        </h3>
+        <p>Summary: <%= book.summary %></p>
+        <p>ISBN: <%= book.isbn %></p>
+        <p>
+          Genres: <% book.genre.forEach((genre, index) => { %>
+          <a href="<%= genre.url %>"><%= genre.name %></a>
+          <% if (book.genre.length-1 != index) { %> , <% } %> <% }) %>
+        </p>
+
+        <br />
+        <h4>Copies</h4>
+        <% if (book_instances.length) { %> <% book_instances.forEach(instance =>
+        { %> <% if (instance.status == 'Available') { %>
+        <p class="text-success"><%= instance.status %></p>
+        <% } else if (instance.status == 'Maintenance') {%>
+        <p class="text-danger"><%= instance.status %></p>
+        <% } else { %>
+        <p class="text-warning"><%= instance.status %></p>
+        <% } %>
+
+        <p>Imprint: <%= instance.imprint %></p>
+
+        <% if (instance.status != 'Available') { %>
+        <p class="text-danger">Due: <%= instance.due_back_formatted %></p>
+        <% } %>
+
+        <p>Id: <a href="<%= instance.url %>"><%= instance.id %></a></p>
+        <br />
+        <% }) %> <% } else { %>
+        <p>There are no copies of this book.</p>
+        <% } %>
+        <div class="cta">
+          <a class="button del" href="<%= book.url %>/delete">Delete Book</a>
+          <a class="button update" href="<%= book.url %>/update">Update Book</a>
+        </div>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>

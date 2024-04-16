@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1>Author: <%= author.name %></h1>
+        <p><%= author.life %></p>
+        <br />
+
+        <% if (author_books.length) { %> <% author_books.forEach(book => { %>
+        <a class="text-success" href="<%= book.url %>"><%= book.title %></a>
+        <p><%= book.summary %></p>
+        <% }) %> <% } else { %>
+        <p>Author has no books.</p>
+        <% } %>
+        <div class="cta">
+          <a class="button del" href="<%= author.url %>/delete"
+            >Delete Author</a
+          >
+          <a class="button update" href="<%= author.url %>/update"
+            >Update Author</a
+          >
+        </div>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>
