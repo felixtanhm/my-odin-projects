@@ -3,7 +3,11 @@ const Author = require("../models/author");
 // Display list of all Authors.
 exports.author_list = async function (req, res, next) {
   try {
-    res.send("NOT IMPLEMENTED: Author list");
+    const allAuthors = await Author.find().sort({ family_name: 1 }).exec();
+    res.render("author_list", {
+      title: "Author List",
+      author_list: allAuthors,
+    });
   } catch (error) {
     return next(error);
   }

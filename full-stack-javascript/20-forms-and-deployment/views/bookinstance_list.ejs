@@ -20,10 +20,7 @@
             <% } else { %>
             <span class="text-warning"><%= instance.status %></span>
             <% } %> <% if (instance.span != 'Available') { %>
-            <span
-              >(Due: <%= formatRelative(new Date(`${instance?.due_back}`), new
-              Date()) %> )</span
-            >
+            <span>(Due: <%= instance.due_date %> )</span>
             <% } %>
           </li>
           <% }) %>

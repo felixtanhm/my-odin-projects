@@ -1,15 +1,12 @@
 const BookInstance = require("../models/bookinstance");
-const { formatRelative } = require("date-fns");
 
 // Display list of all BookInstances.
 exports.bookinstance_list = async function (req, res, next) {
   try {
     const allBookInstances = await BookInstance.find().populate("book").exec();
-    console.log(allBookInstances[0]);
     res.render("bookinstance_list", {
       title: "Book Instance List",
       bookinstance_list: allBookInstances,
-      formatRelative,
     });
   } catch (error) {
     return next(error);

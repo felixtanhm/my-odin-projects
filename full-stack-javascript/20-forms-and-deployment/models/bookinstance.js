@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { formatRelative } = require("date-fns");
 
 const Schema = mongoose.Schema;
 
@@ -18,6 +19,14 @@ const BookInstanceSchema = new Schema({
 BookInstanceSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
   return `/catalog/bookinstance/${this._id}`;
+});
+
+// Virtual for bookinstance's Due Back
+BookInstanceSchema.virtual("due_date").get(function () {
+  // We don't use an arrow function as we'll need the this object
+  return this.due_back
+    ? formatRelative(new Date(`${this.due_back}`), new Date())
+    : "";
 });
 
 // Export model

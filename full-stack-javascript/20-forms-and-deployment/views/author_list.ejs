@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1 class=""><%= title %></h1>
+        <% if (author_list.length) { %>
+        <ul>
+          <% author_list.forEach(author => { %>
+          <li>
+            <a href="<%= author.url %>"><%= author.name %></a> | <%= author.life
+            %>
+          </li>
+          <% }) %>
+        </ul>
+        <%} else { %>
+        <p>There are no authors.</p>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>
