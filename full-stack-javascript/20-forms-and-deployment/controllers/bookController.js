@@ -173,7 +173,20 @@ exports.book_create_post = [
 // Display book delete form on GET.
 exports.book_delete_get = async function (req, res, next) {
   try {
-    res.send("NOT IMPLEMENTED: Book delete GET");
+    const [book, allBookCopies] = await Promise.all([
+      Book.findById(req.params.id).populate("author").exec(),
+      BookInstance.find({ book: req.params.id }).exec(),
+    ]);
+
+    if (book === null) {
+      res.redirect("/catalog/books");
+    }
+
+    res.render("book_delete", {
+      title: "Delete Book",
+      book,
+      book_copies: allBookCopies,
+    });
   } catch (error) {
     return next(error);
   }
@@ -182,7 +195,22 @@ exports.book_delete_get = async function (req, res, next) {
 // Handle book delete on POST.
 exports.book_delete_post = async function (req, res, next) {
   try {
-    res.send("NOT IMPLEMENTED: Book delete POST");
+    const [book, allBookCopies] = await Promise.all([
+      Book.findById(req.params.id).exec(),
+      BookInstance.find({ book: req.params.id }).exec(),
+    ]);
+
+    if (allBookCopies.length > 0) {
+      res.render("book_delete", {
+        title: "Delete Book",
+        book,
+        book_copies: allBookCopies,
+      });
+      return;
+    } else {
+      await Book.findByIdAndDelete(req.body.bookid);
+      res.redirect("/catalog/books");
+    }
   } catch (error) {
     return next(error);
   }

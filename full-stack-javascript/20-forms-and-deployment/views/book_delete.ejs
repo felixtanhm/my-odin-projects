@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <div class="content">
+        <h1>Book: <%= book.title %></h1>
+        <p><%= book.author.name %></p>
+        <p><%= book.summary %></p>
+        <br />
+        <% if (book_copies.length) { %>
+        <p>
+          Delete the following book copies before attempting to delete this
+          book.
+        </p>
+        <h2>Book Copies</h2>
+        <% book_copies.forEach(copy => { %>
+        <a class="text-success" href="<%= copy.url %>"><%= copy.id %></a>
+        <p>Imprint: <%= copy.imprint %></p>
+        <% }) %> <% } else { %>
+        <p>Do you really want to delete this Book?</p>
+        <form action="" method="post">
+          <input
+            type="hidden"
+            name="bookid"
+            id="bookid"
+            value="<%= book._id %>"
+          />
+          <button type="submit">Delete</button>
+        </form>
+        <% } %>
+      </div>
+      <%- include('./partials/footer') %>
+    </main>
+  </body>
+</html>
