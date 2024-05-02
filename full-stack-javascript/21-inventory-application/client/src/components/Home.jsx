@@ -1,10 +1,9 @@
 import PokeList from "./PokeList";
 
-function Home({ text }) {
+function Home() {
   return (
     <div>
       <PokeList />
-      <p>{text}</p>
     </div>
   );
 }

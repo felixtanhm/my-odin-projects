@@ -1,20 +1,30 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  SunIcon,
+  MoonIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import { DarkModeContext } from "../App";
 
 const navigation = [
   { name: "Home", href: "/", path: "", current: true },
   { name: "Favorites", href: "/favorites", path: "favorites", current: false },
 ];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function NavBar({ route }) {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
-    <Disclosure as="nav" className="bg-white dark:bg-gray-800">
+    <Disclosure
+      as="nav"
+      className="bg-white dark:bg-gray-800 shadow dark:border-b-2 dark:border-gray-700"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -62,10 +72,18 @@ export default function NavBar({ route }) {
                 <button
                   type="button"
                   className="relative rounded-full bg-white dark:bg-gray-800 p-1 text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-white focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                  onClick={() => {
+                    setDarkMode(!darkMode);
+                  }}
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  {darkMode && (
+                    <MoonIcon className="h-6 w-6" aria-hidden="true" />
+                  )}
+                  {!darkMode && (
+                    <SunIcon className="h-6 w-6" aria-hidden="true" />
+                  )}
                 </button>
 
                 {/* Profile dropdown */}
