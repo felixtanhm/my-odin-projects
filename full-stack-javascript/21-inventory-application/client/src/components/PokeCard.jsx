@@ -1,16 +1,43 @@
 import capitalise from "../utils/capitalise";
+import { HeartIcon as HeartIconOutline } from "@heroicons/react/24/outline";
+import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 
 function PokeCard({ pokemon }) {
-  // console.log(pokemon);
+  function handleClick(e) {
+    console.log(e);
+  }
 
   return (
-    <div className="p-4 flex flex-col items-center border-solid border-2 border-gray-900 rounded-md">
-      <img className="max-w-24	" src={pokemon.sprites.front_default}></img>
-      <p>{capitalise(pokemon.name)}</p>
-      <div>
-        {pokemon.types.map((typeObj) => {
-          return <span key={typeObj.type.name}>{typeObj.type.name}</span>;
-        })}
+    <div className="flex flex-col items-center rounded-md bg-gray-500/20 p-4">
+      <div className="absolute self-end">
+        <button
+          type="button"
+          className="relative rounded-full p-1 text-gray-500 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-white dark:focus:ring-white dark:focus:ring-offset-gray-800"
+          onClick={() => {
+            handleClick(pokemon.id);
+          }}
+        >
+          <span className="sr-only">Favorite Pokemon</span>
+          <HeartIconOutline className="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+      <img className="mt-6 max-w-24" src={pokemon.sprites.front_default}></img>
+      <div className="flex flex-col items-center gap-2 p-2">
+        <p className="text-xl font-bold text-gray-300">
+          {capitalise(pokemon.name)}
+        </p>
+        <div className="flex gap-2">
+          {pokemon.types.map((typeObj) => {
+            return (
+              <span
+                key={typeObj.type.name}
+                className="min-w-12 rounded-xl bg-white px-2 py-1 text-center text-xs font-semibold"
+              >
+                {capitalise(typeObj.type.name)}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
