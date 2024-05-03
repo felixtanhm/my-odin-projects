@@ -1,6 +1,7 @@
 import capitalise from "../utils/capitalise";
 import { HeartIcon as HeartIconOutline } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
+import PokemonType from "./PokemonType";
 
 function PokeCard({ pokemon }) {
   function handleClick(e) {
@@ -29,12 +30,10 @@ function PokeCard({ pokemon }) {
         <div className="flex gap-2">
           {pokemon.types.map((typeObj) => {
             return (
-              <span
+              <PokemonType
                 key={typeObj.type.name}
-                className="min-w-12 rounded-xl bg-white px-2 py-1 text-center text-xs font-semibold"
-              >
-                {capitalise(typeObj.type.name)}
-              </span>
+                type={capitalise(typeObj.type.name)}
+              />
             );
           })}
         </div>
