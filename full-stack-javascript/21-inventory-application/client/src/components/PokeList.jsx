@@ -69,8 +69,8 @@ function PokeList() {
           <button
             className="w-fit min-w-32 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 dark:hover:bg-gray-100"
             disabled={state === "loading"}
-            onClick={() => {
-              console.log(list.next);
+            onClick={(e) => {
+              console.log(e);
               setState("loading");
               fetchList(list.data);
             }}
