@@ -45,9 +45,13 @@ async function main() {
   // console.log("-----LIST START-----");
   // console.log(expandList);
   // console.log("-----LIST END-----");
-  console.log(expandList.length);
+  console.log(`List Length: ${expandList.length}`);
 
-  await createPokemon(expandList[0]);
+  const { newPokemon, newPokeDetails } = processPokeData(expandList[0]);
+
+  const detailsRef = await createPokeDetails(newPokeDetails);
+
+  await createPokemon(newPokemon, detailsRef);
   // await createGenres();
   // await createAuthors();
 
@@ -55,8 +59,11 @@ async function main() {
   mongoose.connection.close();
 }
 
-async function createPokemon(data) {
-  const newPoke = {
+function processPokeData(data) {
+  console.log("Processing Pokemon:");
+  console.log(data);
+
+  const newPokemon = {
     name: data.name,
     dexId: data.order,
     avatar: data.sprites.front_default,
@@ -64,7 +71,35 @@ async function createPokemon(data) {
       return typeObj.type.name;
     }),
   };
-  const pokemon = new Pokemon(newPoke);
+
+  const newPokeDetails = {
+    height: data.height,
+    weight: data.weight,
+    // has_gender: data.height,
+    hp: data.stats[0].base_stat,
+    attack: data.stats[1].base_stat,
+    defense: data.stats[2].base_stat,
+    specialAttack: data.stats[3].base_stat,
+    specialDefense: data.stats[4].base_stat,
+    speed: data.stats[5].base_stat,
+    abilities: data.abilities.map((aObj) => {
+      return aObj.ability.name;
+    }),
+    // evolvesTo: [{ type: Schema.Types.ObjectId, ref: "Pokemon" }],
+  };
+  return { newPokemon, newPokeDetails };
+}
+
+async function createPokeDetails(newPokeDetails) {
+  const pokeDetails = new PokeDetails(newPokeDetails);
+  console.log(`\n Poke Details:`);
+  console.log(pokeDetails);
+  return pokeDetails;
+}
+
+async function createPokemon(newPokemon, detailsRef) {
+  const pokemon = new Pokemon({ ...newPokemon, details: detailsRef });
+  console.log(`\n Pokemon:`);
   console.log(pokemon);
 }
 
