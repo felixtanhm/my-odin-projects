@@ -14,9 +14,10 @@ function PokeList() {
       const response = await fetch(endpoint);
       const result = await response.json();
 
-      const response2 = await fetch("http://localhost:3000/pokemon/");
-      const result2 = await response2.json();
-      console.log(result2);
+      // const response2 = await fetch("http://localhost:3000/pokemon/");
+      // const result2 = await response2.json();
+      // console.log("result2");
+      // console.log(result2);
 
       if (result.results) {
         const { count, next, previous } = { ...result };
