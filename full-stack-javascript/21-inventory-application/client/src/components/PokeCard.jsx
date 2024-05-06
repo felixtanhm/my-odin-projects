@@ -1,7 +1,7 @@
 import capitalise from "../utils/capitalise";
 import { HeartIcon as HeartIconOutline } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
-import PokemonType from "./PokemonType";
+import PokeType from "./PokeType";
 import { useNavigate } from "react-router-dom";
 
 function PokeCard({ pokemon }) {
@@ -44,7 +44,7 @@ function PokeCard({ pokemon }) {
         <div className="flex gap-2">
           {pokemon.types.map((typeObj) => {
             return (
-              <PokemonType
+              <PokeType
                 key={typeObj.type.name}
                 type={capitalise(typeObj.type.name)}
               />

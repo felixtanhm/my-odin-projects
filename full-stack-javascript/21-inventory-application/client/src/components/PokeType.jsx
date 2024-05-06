@@ -1,6 +1,6 @@
 import pokemonTypes from "../utils/pokemonTypes";
 
-function PokemonType({ type }) {
+function PokeType({ type }) {
   const typeColor = pokemonTypes[type.toLowerCase()];
   const classes =
     "min-w-12 rounded-xl px-2 py-1 text-center text-xs font-bold text-white ";
@@ -8,4 +8,4 @@ function PokemonType({ type }) {
   return <span className={classes + typeColor}>{type}</span>;
 }
 
-export default PokemonType;
+export default PokeType;

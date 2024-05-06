@@ -2,13 +2,15 @@ const axios = require("axios");
 
 exports.pokeList = async function (req, res, next) {
   console.log("pokelist");
+  console.log(req);
   try {
     const response = await axios.get(
       "https://pokeapi.co/api/v2/pokemon/?limit=24"
     );
-    // const results = await response.json();
-    console.log(response.data);
+
+    res.status(200);
+    res.send({ ...response.data });
   } catch (error) {
-    console.log(error);
+    return next(error);
   }
 };

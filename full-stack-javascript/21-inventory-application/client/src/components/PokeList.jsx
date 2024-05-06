@@ -5,7 +5,7 @@ function PokeList() {
   const [list, setList] = useState(null);
   const [state, setState] = useState("loading");
   const [error, setError] = useState(null);
-
+  console.log(list);
   async function fetchList(currData) {
     try {
       const endpoint = list
@@ -13,6 +13,10 @@ function PokeList() {
         : `https://pokeapi.co/api/v2/pokemon/?limit=24`;
       const response = await fetch(endpoint);
       const result = await response.json();
+
+      const response2 = await fetch("http://localhost:3000/pokemon/");
+      const result2 = await response2.json();
+      console.log(result2);
 
       if (result.results) {
         const { count, next, previous } = { ...result };
@@ -70,7 +74,6 @@ function PokeList() {
             className="w-fit min-w-32 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 dark:hover:bg-gray-100"
             disabled={state === "loading"}
             onClick={(e) => {
-              console.log(e);
               setState("loading");
               fetchList(list.data);
             }}
