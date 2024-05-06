@@ -4,9 +4,23 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+
+const mongoDb = process.env.MONGO_DB;
+const mongoURI = process.env.MONGO_URI;
+const uri = `${mongoURI}/${mongoDb}?retryWrites=true&w=majority`;
+
+mongoose.set("strictQuery", false);
+
+async function connectDB() {
+  await mongoose.connect(uri);
+  console.log("db connected");
+}
+
+connectDB().catch((error) => console.log(error));
 
 const app = express();
 app.use(cors());

@@ -26,7 +26,7 @@ async function main() {
   await mongoose.connect(mongoDB);
   console.log("Debug: Should be connected?");
   const response = await axios.get(
-    "https://pokeapi.co/api/v2/pokemon/?limit=151"
+    "https://pokeapi.co/api/v2/pokemon/?limit=1"
   );
   let expandList = [];
   if (response.status === 200) {
@@ -34,12 +34,6 @@ async function main() {
       response.data.results.map(async (item) => {
         try {
           const singleResponse = await axios.get(item.url);
-          console.log(`Single Status: ` + singleResponse.status);
-          console.log(singleResponse.status);
-
-          console.log(`Single Data:`);
-          console.log(singleResponse.data);
-
           item = { ...item, ...singleResponse.data };
           return item;
         } catch (error) {
@@ -48,19 +42,30 @@ async function main() {
       })
     );
   }
-  console.log("-----LIST START-----");
-  console.log(expandList);
-  console.log("-----LIST END-----");
+  // console.log("-----LIST START-----");
+  // console.log(expandList);
+  // console.log("-----LIST END-----");
   console.log(expandList.length);
 
+  await createPokemon(expandList[0]);
   // await createGenres();
   // await createAuthors();
-  // console.log(response.status);
-  // console.log(response.statusText);
-  // console.log(response.data.results[150]);
 
   console.log("Debug: Closing mongoose");
   mongoose.connection.close();
+}
+
+async function createPokemon(data) {
+  const newPoke = {
+    name: data.name,
+    dexId: data.order,
+    avatar: data.sprites.front_default,
+    types: data.types.map((typeObj) => {
+      return typeObj.type.name;
+    }),
+  };
+  const pokemon = new Pokemon(newPoke);
+  console.log(pokemon);
 }
 
 // We pass the index to the ...Create functions so that, for example,

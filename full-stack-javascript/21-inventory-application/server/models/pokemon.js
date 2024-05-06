@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const PokeSchema = new Schema({
   name: { type: String, required: true },
   dexId: { type: Number, required: true },
-  types: [{ type: String }],
+  types: { type: [String], default: undefined },
   avatar: { type: String, required: true },
   details: { type: Schema.Types.ObjectId, ref: "PokeDetails", required: true },
 });
