@@ -2,7 +2,7 @@
 const axios = require("axios");
 
 console.log(
-  'This script populates some test books, authors, genres and bookinstances to your database. Specified database as argument - e.g.: node populatedb "mongodb+srv://felixtanhm-top:4eLAie362hId35TA@cluster0.wiqnlaq.mongodb.net/pokemon?retryWrites=true&w=majority"'
+  'This script populates some test books, authors, genres and bookinstances to your database. Specified database as argument - e.g.: node populatedb "mongodb+srv://abc:123@cluster0.wiqnlaq.mongodb.net/pokemon?retryWrites=true&w=majority"'
 );
 
 // Get arguments passed on command line
