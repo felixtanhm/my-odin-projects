@@ -9,8 +9,8 @@ const PokeDetailsSchema = new Schema({
   hp: { type: Number, required: true },
   attack: { type: Number, required: true },
   defense: { type: Number, required: true },
-  specialAttack: { type: Number, required: true },
-  specialDefense: { type: Number, required: true },
+  special_attack: { type: Number, required: true },
+  special_defense: { type: Number, required: true },
   speed: { type: Number, required: true },
   abilities: {
     type: [String],
@@ -18,13 +18,8 @@ const PokeDetailsSchema = new Schema({
       return null;
     },
   },
-  evolvesTo: {
-    type: [Schema.Types.ObjectId],
-    ref: "Pokemon",
-    default: () => {
-      return null;
-    },
-  },
+  created_at: { type: Date, default: Date.now() },
+  last_modified: { type: Date, default: Date.now() },
 });
 
 // Export model

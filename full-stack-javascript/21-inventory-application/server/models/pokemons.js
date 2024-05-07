@@ -13,6 +13,8 @@ const PokeSchema = new Schema({
   },
   avatar: { type: String, required: true },
   details: { type: Schema.Types.ObjectId, ref: "PokeDetails", required: true },
+  created_at: { type: Date, default: Date.now() },
+  last_modified: { type: Date, default: Date.now() },
 });
 
 // Virtual for pokemon's URL
