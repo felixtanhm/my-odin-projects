@@ -11,17 +11,11 @@ function PokeCard({ pokemon }) {
     console.log(dexId);
   }
 
-  function displayPokemon(e, dexId) {
-    console.log(e);
-    console.log(dexId);
-    navigate(`/pokemon/${dexId}`);
-  }
-
   return (
     <div
       className="flex cursor-pointer flex-col items-center rounded-md bg-gray-200 p-4 dark:bg-gray-500/20"
-      onClick={(e) => {
-        displayPokemon(e, pokemon.dexId);
+      onClick={() => {
+        navigate(`/pokemon/${pokemon.dexId}`);
       }}
     >
       <div className="absolute self-end">

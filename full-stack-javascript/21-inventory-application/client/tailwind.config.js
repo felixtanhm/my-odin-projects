@@ -18,7 +18,7 @@ export default {
         ice: "#98D8D8",
         fairy: "#F0B6BC",
         poison: "#A040A0",
-        psychic: "#F8588",
+        psychic: "#F85888",
         dark: "#705848",
         fighting: "#C03028",
         dragon: "#7038F8",

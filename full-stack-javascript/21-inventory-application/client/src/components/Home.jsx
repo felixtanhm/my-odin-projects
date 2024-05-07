@@ -1,11 +1,7 @@
 import PokeList from "./PokeList";
 
 function Home() {
-  return (
-    <div>
-      <PokeList />
-    </div>
-  );
+  return <PokeList />;
 }
 
 export default Home;

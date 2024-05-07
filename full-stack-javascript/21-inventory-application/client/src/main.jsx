@@ -17,7 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home text="home" />}></Route>
-      <Route path="pokemon/:pokemonId" element={<PokeDetails />}></Route>
+      <Route path="pokemon/:dexId" element={<PokeDetails />}></Route>
       <Route path="favorites" element={<Test text="favs" />}></Route>
     </Route>,
   ),
