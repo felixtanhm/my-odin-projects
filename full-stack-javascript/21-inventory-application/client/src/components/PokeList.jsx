@@ -5,47 +5,33 @@ function PokeList() {
   const [list, setList] = useState(null);
   const [state, setState] = useState("loading");
   const [error, setError] = useState(null);
+  console.log("list");
+
   console.log(list);
   async function fetchList(currData) {
     try {
-      const endpoint = list
-        ? list.next
-        : `https://pokeapi.co/api/v2/pokemon/?limit=24`;
-      const response = await fetch(endpoint);
-      const result = await response.json();
+      const nextId = currData.length;
+      const response = await fetch(
+        `http://localhost:3000/pokemon?cursor=${nextId}`,
+      );
 
-      // const response2 = await fetch("http://localhost:3000/pokemon/");
-      // const result2 = await response2.json();
-      // console.log("result2");
-      // console.log(result2);
-
-      if (result.results) {
-        const { count, next, previous } = { ...result };
-        const nextList = {
-          count,
-          next,
-          previous,
-          data: [...currData],
-        };
-
-        const expandList = await Promise.all(
-          result.results.map(async (item) => {
-            try {
-              const singleResponse = await fetch(item.url);
-              const singleResult = await singleResponse.json();
-              item = { ...item, ...singleResult };
-              return item;
-            } catch (error) {
-              console.log({ ...item, error });
-            }
-          }),
-        );
-
-        nextList.data = [...currData, ...expandList];
-
-        setList(nextList);
-        setState("success");
+      if (!response.ok) {
+        let errorMessage = `Failed to fetch data. Status: ${response.status}`;
+        if (response.statusText) {
+          errorMessage += `, Message: ${response.statusText}`;
+        }
+        throw new Error(errorMessage);
       }
+
+      const result = await response.json();
+      const nextList = {
+        totalCount: result.totalCount,
+        data: [...currData, ...result.data],
+      };
+
+      setList(nextList);
+      setState("success");
+      // }
     } catch (error) {
       console.log(error);
       setState("error");
@@ -68,7 +54,7 @@ function PokeList() {
         <>
           <div className="grid w-full max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
             {list.data.map((item) => {
-              return <PokeCard pokemon={item} key={item.id}></PokeCard>;
+              return <PokeCard pokemon={item} key={item._id}></PokeCard>;
             })}
           </div>
           <button
