@@ -5,8 +5,6 @@ const pokeController = require("../controllers/pokeController");
 /* GET Pokemon List */
 router.get("/pokemon", pokeController.pokeList);
 
-router.get("/pokemon/:pokemonId", function (req, res, next) {
-  console.log("get individual pokemon: " + `${req.params.pokemonId}`);
-});
+router.get("/pokemon/:dexId", pokeController.pokeDetails);
 
 module.exports = router;

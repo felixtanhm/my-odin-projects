@@ -18,3 +18,20 @@ exports.pokeList = async function (req, res, next) {
     return next(error);
   }
 };
+
+exports.pokeDetails = async function (req, res, next) {
+  try {
+    const pokemon = await Pokemons.findOne({ dexId: req.params.dexId })
+      .populate("details")
+      .exec();
+    if (pokemon === null) {
+      const error = new Error("Pokemon not found");
+      error.status = 404;
+      return next(error);
+    }
+
+    res.status(200).json(pokemon);
+  } catch (error) {
+    return next(error);
+  }
+};
