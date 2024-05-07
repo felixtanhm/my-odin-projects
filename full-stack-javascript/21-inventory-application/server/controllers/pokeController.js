@@ -1,15 +1,19 @@
 const axios = require("axios");
+const Pokemons = require("../models/pokemons");
+const PokeDetails = require("../models/pokeDetails");
 
 exports.pokeList = async function (req, res, next) {
-  console.log("pokelist");
-  console.log(req);
   try {
-    const response = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon/?limit=24"
-    );
+    const count = await Pokemons.countDocuments().exec();
+    const allPokemon = await Pokemons.find({ dexId: { $gt: req.query.cursor } })
+      .sort({ dexId: 1 })
+      .limit(24)
+      .exec();
 
-    res.status(200);
-    res.send({ ...response.data });
+    res.status(200).json({
+      totalCount: count,
+      data: allPokemon,
+    });
   } catch (error) {
     return next(error);
   }
