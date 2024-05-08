@@ -1,10 +1,6 @@
 #! /usr/bin/env node
 const axios = require("axios");
 
-console.log(
-  'This script populates some test books, authors, genres and bookinstances to your database. Specified database as argument - e.g.: node populatedb "mongodb+srv://abc:123@cluster0.wiqnlaq.mongodb.net/pokemon?retryWrites=true&w=majority"'
-);
-
 // Get arguments passed on command line
 const userArgs = process.argv.slice(2);
 
@@ -29,6 +25,8 @@ async function main() {
     "https://pokeapi.co/api/v2/pokemon/?limit=151"
   );
   let expandList = [];
+
+  // Get individual Pokemon Details
   if (response.status === 200) {
     expandList = await Promise.all(
       response.data.results.map(async (item) => {
@@ -53,6 +51,8 @@ async function main() {
       })
     );
   }
+
+  // Create Pokemon and Details for each Pokemon
   expandList.forEach(async (item) => {
     const { newPokemon, newPokeDetails } = processPokeData(item);
     const detailsRef = await createPokeDetails(newPokeDetails);
