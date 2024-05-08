@@ -4,12 +4,8 @@ import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 import PokeType from "./PokeType";
 import { useNavigate } from "react-router-dom";
 
-function PokeCard({ pokemon, isFav }) {
+function PokeCard({ pokemon, isFav, toggleFavorite }) {
   const navigate = useNavigate();
-  function toggleFavorite(e, dexId) {
-    e.stopPropagation();
-    console.log(dexId);
-  }
 
   return (
     <div

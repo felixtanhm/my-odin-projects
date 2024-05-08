@@ -42,6 +42,11 @@ function PokeList() {
     }
   }
 
+  function toggleFavorite(e, dexId) {
+    e.stopPropagation();
+    console.log(dexId);
+  }
+
   if (!list) {
     fetchList([]);
   }
@@ -55,7 +60,12 @@ function PokeList() {
           <div className="grid w-full max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
             {list.data.map((item) => {
               return (
-                <PokeCard pokemon={item} isFav={true} key={item._id}></PokeCard>
+                <PokeCard
+                  pokemon={item}
+                  isFav={true}
+                  toggleFavorite={toggleFavorite}
+                  key={item._id}
+                ></PokeCard>
               );
             })}
           </div>

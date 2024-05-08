@@ -10,17 +10,26 @@ import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 function PokeDetails() {
   const params = useParams();
   const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
   const [currPokemon, setCurrPokemon] = useState(null);
   const [state, setState] = useState("loading");
-  const { user, setUser } = useContext(UserContext);
-  const isFav = user.favorites.includes(currPokemon._id);
+  let isFav = null;
 
-  function toggleFavorite(dexId) {
-    console.log(dexId);
-    const nextFavs = user.favorites
-      ? [...user.favorites, currPokemon._id]
-      : [currPokemon._id];
-    setUser({ ...user, favorites: nextFavs });
+  if (user) {
+    if (user.favorites) {
+      isFav = user.favorites.includes(currPokemon._id);
+    } else isFav = false;
+  }
+
+  function toggleFavorite() {
+    if (isFav) {
+      // remove from favs
+    } else {
+      const nextFavs = user.favorites
+        ? [...user.favorites, currPokemon._id]
+        : [currPokemon._id];
+      setUser({ ...user, favorites: nextFavs });
+    }
   }
 
   function handleNav(dexId, isPrev) {
@@ -73,7 +82,7 @@ function PokeDetails() {
               type="button"
               className="flex w-36 items-center justify-center gap-1 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700"
               onClick={() => {
-                toggleFavorite(currPokemon.dexId);
+                toggleFavorite();
               }}
             >
               <span className="sr-only">Favorite Pokemon</span>
@@ -86,7 +95,7 @@ function PokeDetails() {
               {!isFav && (
                 <HeartIconOutline className="h-5" aria-hidden="true" />
               )}
-              Add Favorite
+              {isFav ? "Favorited" : "Add Favorite"}
             </button>
             <Button
               isDisabled={currPokemon.dexId === 151}
