@@ -50,7 +50,6 @@ async function main() {
       })
     );
   }
-
   expandList.forEach(async (item) => {
     const { newPokemon, newPokeDetails } = processPokeData(item);
     const detailsRef = await createPokeDetails(newPokeDetails);
@@ -61,7 +60,7 @@ async function main() {
 function processPokeData(data) {
   const newPokemon = {
     name: data.name,
-    dexId: data.order,
+    dexId: data.id,
     avatar: data.sprites.front_default,
     types: data.types.map((typeObj) => {
       return typeObj.type.name;
