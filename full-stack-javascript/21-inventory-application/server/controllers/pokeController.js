@@ -1,4 +1,3 @@
-const axios = require("axios");
 const Pokemons = require("../models/pokemons");
 const PokeDetails = require("../models/pokeDetails");
 

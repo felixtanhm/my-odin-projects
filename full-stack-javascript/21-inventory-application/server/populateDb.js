@@ -6,7 +6,6 @@ const userArgs = process.argv.slice(2);
 
 const Pokemons = require("./models/pokemons");
 const PokeDetails = require("./models/pokeDetails");
-const Favorites = require("./models/favorites");
 const Users = require("./models/users");
 
 const mongoose = require("mongoose");
@@ -109,11 +108,6 @@ async function createNewUser() {
     email: "felixtanhm@gmail.com",
   });
 
-  const newFavorites = new Favorites({
-    user: newUser,
-  });
-
   await newUser.save();
-  await newFavorites.save();
   console.log("Initial User Created");
 }
