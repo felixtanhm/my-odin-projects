@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../App";
 import PokeType from "./PokeType";
 import Button from "./Button";
 import capitalise from "../utils/capitalise";
@@ -11,9 +12,15 @@ function PokeDetails() {
   const navigate = useNavigate();
   const [currPokemon, setCurrPokemon] = useState(null);
   const [state, setState] = useState("loading");
+  const { user, setUser } = useContext(UserContext);
+  const isFav = user.favorites.includes(currPokemon._id);
 
   function toggleFavorite(dexId) {
     console.log(dexId);
+    const nextFavs = user.favorites
+      ? [...user.favorites, currPokemon._id]
+      : [currPokemon._id];
+    setUser({ ...user, favorites: nextFavs });
   }
 
   function handleNav(dexId, isPrev) {
@@ -70,7 +77,15 @@ function PokeDetails() {
               }}
             >
               <span className="sr-only">Favorite Pokemon</span>
-              <HeartIconOutline className="h-5" aria-hidden="true" />
+              {isFav && (
+                <HeartIconSolid
+                  className="h-5 text-rose-500 dark:text-rose-800	"
+                  aria-hidden="true"
+                />
+              )}
+              {!isFav && (
+                <HeartIconOutline className="h-5" aria-hidden="true" />
+              )}
               Add Favorite
             </button>
             <Button

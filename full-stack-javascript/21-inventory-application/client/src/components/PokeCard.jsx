@@ -4,7 +4,7 @@ import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 import PokeType from "./PokeType";
 import { useNavigate } from "react-router-dom";
 
-function PokeCard({ pokemon }) {
+function PokeCard({ pokemon, isFav }) {
   const navigate = useNavigate();
   function toggleFavorite(e, dexId) {
     e.stopPropagation();
@@ -27,7 +27,15 @@ function PokeCard({ pokemon }) {
           }}
         >
           <span className="sr-only">Favorite Pokemon</span>
-          <HeartIconOutline className="h-6 w-6" aria-hidden="true" />
+          {isFav && (
+            <HeartIconSolid
+              className="h-6 w-6 text-rose-500 dark:text-rose-800	"
+              aria-hidden="true"
+            />
+          )}
+          {!isFav && (
+            <HeartIconOutline className="h-6 w-6" aria-hidden="true" />
+          )}
         </button>
       </div>
       <img className="mt-6 max-w-24" src={pokemon.avatar}></img>

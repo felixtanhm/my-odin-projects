@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../App";
 import PokeCard from "./PokeCard";
 
 function PokeList() {
   const [list, setList] = useState(null);
   const [state, setState] = useState("loading");
   const [error, setError] = useState(null);
+  const { user, setUser } = useContext(UserContext);
 
   async function fetchList(currData) {
     try {
@@ -52,7 +54,9 @@ function PokeList() {
         <>
           <div className="grid w-full max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
             {list.data.map((item) => {
-              return <PokeCard pokemon={item} key={item._id}></PokeCard>;
+              return (
+                <PokeCard pokemon={item} isFav={true} key={item._id}></PokeCard>
+              );
             })}
           </div>
           {list.data.length < 151 && (

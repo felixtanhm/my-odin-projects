@@ -12,7 +12,7 @@ function App() {
     window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
   const [user, setUser] = useState(null);
-
+  console.log(user);
   async function fetchUser() {
     try {
       const response = await fetch(`http://localhost:3000/users`);
