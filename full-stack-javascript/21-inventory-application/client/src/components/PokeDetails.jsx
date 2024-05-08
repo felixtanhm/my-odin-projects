@@ -1,25 +1,30 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PokeType from "./PokeType";
+import Button from "./Button";
 import capitalise from "../utils/capitalise";
 import { HeartIcon as HeartIconOutline } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 
 function PokeDetails() {
   const params = useParams();
+  const navigate = useNavigate();
   const [currPokemon, setCurrPokemon] = useState(null);
   const [state, setState] = useState("loading");
 
-  function toggleFavorite(e, dexId) {
-    e.stopPropagation();
+  function toggleFavorite(dexId) {
     console.log(dexId);
   }
 
-  async function fetchPokemon() {
+  function handleNav(dexId, isPrev) {
+    const nextDexId = isPrev ? dexId - 1 : dexId + 1;
+    navigate(`/pokemon/${nextDexId}`);
+    fetchPokemon(nextDexId);
+  }
+
+  async function fetchPokemon(dexId) {
     try {
-      const response = await fetch(
-        `http://localhost:3000/pokemon/${params.dexId}`,
-      );
+      const response = await fetch(`http://localhost:3000/pokemon/${dexId}`);
 
       if (!response.ok) {
         let errorMessage = `Failed to fetch data. Status: ${response.status}`;
@@ -38,7 +43,7 @@ function PokeDetails() {
     }
   }
 
-  if (!currPokemon) fetchPokemon();
+  if (!currPokemon) fetchPokemon(params.dexId);
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 pb-12 sm:p-6 lg:p-8 dark:bg-gray-800">
@@ -50,22 +55,31 @@ function PokeDetails() {
         <>
           {/* Buttons */}
           <div className="flex w-full justify-between gap-4 md:w-96">
-            <button className="w-20 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700">
-              Previous
-            </button>
+            <Button
+              isDisabled={currPokemon.dexId === 1}
+              onClick={() => {
+                handleNav(currPokemon.dexId, true);
+              }}
+              text={"Previous"}
+            />
             <button
               type="button"
-              className="w-32 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700"
-              onClick={(e) => {
-                toggleFavorite(e, currPokemon.dexId);
+              className="flex w-36 items-center justify-center gap-1 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700"
+              onClick={() => {
+                toggleFavorite(currPokemon.dexId);
               }}
             >
               <span className="sr-only">Favorite Pokemon</span>
-              <HeartIconOutline className="h-6 w-full" aria-hidden="true" />
+              <HeartIconOutline className="h-5" aria-hidden="true" />
+              Add Favorite
             </button>
-            <button className="w-20 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700">
-              Next
-            </button>
+            <Button
+              isDisabled={currPokemon.dexId === 151}
+              onClick={() => {
+                handleNav(currPokemon.dexId, false);
+              }}
+              text={"Next"}
+            />
           </div>
           <img
             className="mt-6 min-w-28 max-w-24"
