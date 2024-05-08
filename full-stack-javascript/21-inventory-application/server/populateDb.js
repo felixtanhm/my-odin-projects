@@ -10,6 +10,8 @@ const userArgs = process.argv.slice(2);
 
 const Pokemons = require("./models/pokemons");
 const PokeDetails = require("./models/pokeDetails");
+const Favorites = require("./models/favorites");
+const Users = require("./models/users");
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
@@ -22,6 +24,7 @@ async function main() {
   console.log("Debug: About to connect");
   await mongoose.connect(mongoDB);
   console.log("Debug: Should be connected?");
+
   const response = await axios.get(
     "https://pokeapi.co/api/v2/pokemon/?limit=151"
   );
@@ -55,6 +58,8 @@ async function main() {
     const detailsRef = await createPokeDetails(newPokeDetails);
     await createPokemon(newPokemon, detailsRef);
   });
+
+  createNewUser();
 }
 
 function processPokeData(data) {
@@ -96,4 +101,19 @@ async function createPokemon(newPokemon, detailsRef) {
   await pokemon.save();
   console.log(`Pokemon: ${pokemon.name}`);
   console.log(`-------------`);
+}
+
+async function createNewUser() {
+  const newUser = new Users({
+    name: "Felix Tan",
+    email: "felixtanhm@gmail.com",
+  });
+
+  const newFavorites = new Favorites({
+    user: newUser,
+  });
+
+  await newUser.save();
+  await newFavorites.save();
+  console.log("Initial User Created");
 }
