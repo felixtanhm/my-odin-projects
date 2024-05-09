@@ -15,20 +15,38 @@ function PokeDetails() {
   const [state, setState] = useState("loading");
   let isFav = null;
 
-  if (user) {
-    if (user.favorites) {
-      isFav = user.favorites.includes(currPokemon._id);
-    } else isFav = false;
+  function handleFavorite(favoriteList) {
+    const { prevFavs, nextFavs } = toggleFavorite(favoriteList);
+    const data = {
+      objectId: user._id,
+      favorites: nextFavs,
+    };
+    updateUser(data, prevFavs);
   }
 
-  function toggleFavorite() {
+  function toggleFavorite(favoritesList) {
+    const prevFavs = [...favoritesList];
+    let nextFavs = favoritesList ? [...favoritesList] : [];
     if (isFav) {
-      // remove from favs
+      const index = nextFavs.indexOf(currPokemon._id);
+      if (index > -1) nextFavs.splice(index, 1);
     } else {
-      const nextFavs = user.favorites
-        ? [...user.favorites, currPokemon._id]
-        : [currPokemon._id];
-      setUser({ ...user, favorites: nextFavs });
+      nextFavs.push(currPokemon._id);
+    }
+    setUser({ ...user, favorites: nextFavs });
+    return { prevFavs, nextFavs };
+  }
+
+  async function updateUser(data, prevFavs) {
+    const response = await fetch(`http://localhost:3000/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      setUser({ ...user, favorites: [...prevFavs] });
     }
   }
 
@@ -61,6 +79,12 @@ function PokeDetails() {
 
   if (!currPokemon) fetchPokemon(params.dexId);
 
+  if (user) {
+    if (user.favorites && currPokemon) {
+      isFav = user.favorites.includes(currPokemon._id);
+    } else isFav = false;
+  }
+
   return (
     <div className="flex flex-col items-center gap-4 p-4 pb-12 sm:p-6 lg:p-8 dark:bg-gray-800">
       {state === "error" && <p className="h-screen">Error para</p>}
@@ -82,7 +106,7 @@ function PokeDetails() {
               type="button"
               className="flex w-36 items-center justify-center gap-1 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700"
               onClick={() => {
-                toggleFavorite();
+                handleFavorite(user.favorites);
               }}
             >
               <span className="sr-only">Favorite Pokemon</span>
