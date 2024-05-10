@@ -2,21 +2,25 @@ import { useState, useContext } from "react";
 import { UserContext } from "../App";
 import PokeCard from "./PokeCard";
 
-function PokeList() {
+function PokeList({ path }) {
   const [list, setList] = useState(null);
   const [state, setState] = useState("loading");
-  const [error, setError] = useState(null);
+  const [page, setPage] = useState(path);
   const { user, setUser } = useContext(UserContext);
 
   async function fetchList(currData) {
     try {
-      const nextId = currData.length
-        ? currData[currData.length - 1]?.dexId
-        : currData.length;
-
-      const response = await fetch(
-        `http://localhost:3000/pokemon?cursor=${nextId}`,
-      );
+      let url;
+      if (path === "home") {
+        const nextId = currData.length
+          ? currData[currData.length - 1]?.dexId
+          : currData.length;
+        url = `http://localhost:3000/pokemon?cursor=${nextId}`;
+      }
+      if (path === "favorites") {
+        url = `http://localhost:3000/users/favorites`;
+      }
+      const response = await fetch(url);
 
       if (!response.ok) {
         let errorMessage = `Failed to fetch data. Status: ${response.status}`;
@@ -34,7 +38,7 @@ function PokeList() {
 
       setList(nextList);
       setState("success");
-      // }
+      setPage(path);
     } catch (error) {
       console.log(error);
       setState("error");
@@ -42,34 +46,34 @@ function PokeList() {
     }
   }
 
-  function toggleFavorite(e, dexId) {
-    e.stopPropagation();
-    console.log(dexId);
-  }
-
-  if (!list) {
+  if (!list || path !== page) {
     fetchList([]);
   }
-
+  console.log(user);
   return (
     <div className="flex flex-col items-center gap-8 p-4 pb-12 sm:p-6 lg:p-8 dark:bg-gray-800">
       {state === "error" && <p className="h-screen">Error</p>}
-      {state === "loading" && !list && <p className="h-screen">Loading...</p>}
+      {state === "loading" && !list && (
+        <p className="h-screen text-3xl font-bold text-gray-500">Loading...</p>
+      )}
       {list && (
         <>
-          <div className="grid w-full max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+          <div className="grid min-h-screen w-full max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
             {list.data.map((item) => {
               return (
                 <PokeCard
                   pokemon={item}
-                  isFav={true}
-                  toggleFavorite={toggleFavorite}
+                  isFav={
+                    path === "favorites"
+                      ? true
+                      : user.favorites.includes(item._id)
+                  }
                   key={item._id}
                 ></PokeCard>
               );
             })}
           </div>
-          {list.data.length < 151 && (
+          {list.data.length < 151 && path !== "favorites" && (
             <button
               className="w-fit min-w-32 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 dark:hover:bg-gray-100"
               disabled={state === "loading"}

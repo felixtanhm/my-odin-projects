@@ -12,6 +12,24 @@ exports.getUser = async function (req, res, next) {
   }
 };
 
+exports.getFavorites = async function (req, res, next) {
+  try {
+    const currUser = await Users.findOne({
+      email: "felixtanhm@gmail.com",
+    })
+      .populate("favorites")
+      .exec();
+
+    const data = {
+      totalCount: currUser.favorites.length,
+      data: currUser.favorites,
+    };
+    res.status(200).json(data);
+  } catch (error) {
+    next(error);
+  }
+};
+
 exports.updateUser = async function (req, res, next) {
   try {
     const { objectId, favorites } = req.body;

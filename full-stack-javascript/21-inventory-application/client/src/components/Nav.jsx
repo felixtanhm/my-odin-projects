@@ -6,7 +6,7 @@ import {
   MoonIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../App";
 
 const navigation = [
@@ -19,6 +19,7 @@ function classNames(...classes) {
 }
 
 export default function NavBar({ route }) {
+  const navigate = useNavigate();
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
@@ -56,6 +57,10 @@ export default function NavBar({ route }) {
                       <NavLink
                         key={item.name}
                         to={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate(`${item.href}`);
+                        }}
                         className={({ isActive }) => {
                           return isActive
                             ? "rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 dark:bg-gray-900 dark:text-white"

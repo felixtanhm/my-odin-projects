@@ -15,8 +15,8 @@ function PokeDetails() {
   const [state, setState] = useState("loading");
   let isFav = null;
 
-  function handleFavorite(favoriteList) {
-    const { prevFavs, nextFavs } = toggleFavorite(favoriteList);
+  function handleFavorite() {
+    const { prevFavs, nextFavs } = toggleFavorite(user.favorites);
     const data = {
       objectId: user._id,
       favorites: nextFavs,
@@ -106,7 +106,7 @@ function PokeDetails() {
               type="button"
               className="flex w-36 items-center justify-center gap-1 rounded-md bg-gray-200 px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-700"
               onClick={() => {
-                handleFavorite(user.favorites);
+                handleFavorite();
               }}
             >
               <span className="sr-only">Favorite Pokemon</span>
